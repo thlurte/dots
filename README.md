@@ -15,7 +15,7 @@ A bunch of tweaks i made to make her appearance pretty much aesthetic..
 <br/>
 
 ## Info
-<img src="assets/demo-03.png" align="right" width="550">
+<img src="assets/demo-06.png" align="right" width="550">
 
 |Distro|[Arch](https://archlinux.org/)|
 |:---:|:---:|
@@ -58,4 +58,4 @@ A bunch of tweaks i made to make her appearance pretty much aesthetic..
 <img src="assets/demo-04.png" align="center">
 <br/>
 <br/>
-<img src="assets/demo-05.png" align="center">
+
