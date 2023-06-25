@@ -55,7 +55,17 @@ A bunch of tweaks i made to make her appearance pretty much aesthetic..
 <img src="assets/demo-02.png" align="center">
 <br/>
 <br/>
+<img src="assets/demo-07.png" align="center">
+<br/>
+<br/>
 <img src="assets/demo-04.png" align="center">
 <br/>
 <br/>
+
+## Mis.
+
+- Font : [Fira Code](https://github.com/tonsky/FiraCode)
+- Cursor : [Phinger Cursors](https://github.com/phisch/phinger-cursors)
+- Alacritty : [Themes : Pencil Light](https://github.com/alacritty/alacritty-theme)
+- Rofi : [Themes : Spotlight](https://github.com/newmanls/rofi-themes-collection)
 
