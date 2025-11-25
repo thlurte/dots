@@ -152,6 +152,8 @@ A bunch of tweaks i made to make her appearance pretty much aesthetic..
 - `wofi` - Application launcher
 - `dolphin` - File manager
 - `fish` - Shell
+- `obsidian` - Note-taking app
+- `cursor` - Code editor (VSCode fork)
 
 ### Utilities
 - `grimblast` - Screenshot utility
@@ -163,6 +165,7 @@ A bunch of tweaks i made to make her appearance pretty much aesthetic..
 - `brightnessctl` - Brightness control
 - `wpctl` - WirePlumber audio control
 - `fzf` - Fuzzy finder
+- `ripgrep` - Text search tool
 - `tesseract` - OCR engine
 
 ## Workspace Layout
@@ -180,8 +183,11 @@ A bunch of tweaks i made to make her appearance pretty much aesthetic..
 
 ## Misc.
 
-- Font : [JetBrains Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts) (as seen in Hyprpanel config)
+- Font : [CaskaydiaCove Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts) (`ttf-cascadia-code-nerd` from pacman)
+  - Applied to Obsidian and VSCode
 - Cursor : [Phinger Cursors](https://github.com/phisch/phinger-cursors)
 - Neovim : [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
-- Theme : Catppuccin Frappe (based on Hyprpanel colors)
+- VSCode Theme : [Catppuccin for VSCode](https://github.com/catppuccin/vscode)
+- VSCode Icons : [Catppuccin Icons for VSCode](https://github.com/catppuccin/vscode)
+- Hyprpanel Theme : Catppuccin Frappe (based on Hyprpanel colors)
 
