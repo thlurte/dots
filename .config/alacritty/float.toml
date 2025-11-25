@@ -1,0 +1,12 @@
+[general]
+# Point this to your actual main config file
+import = ["~/.config/alacritty/alacritty.toml"]
+
+# The Special Rule: Pressing Escape kills this window
+[[keyboard.bindings]]
+key = "Escape"
+action = "Quit"
+
+# Remove window decorations for a cleaner look
+[window]
+decorations = "None"
