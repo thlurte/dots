@@ -137,6 +137,18 @@
           }
         },
         {
+          "dashboard": {
+            "icon_size": 24,
+            "icon_symbolic": true
+          }
+        },
+        {
+          "spacer": {
+            "size": 16,
+            "expand": false
+          }
+        },
+        {
           "audio": {
             "icon_size": 32,
             "icon_symbolic": true,

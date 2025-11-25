@@ -1,3 +1,0 @@
-picom &
-xrandr --output eDP1 --brightness .2
-nitrogen --restore
