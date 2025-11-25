@@ -1,4 +1,4 @@
-<img src="assets/demo-01.png" align="center">
+<img src="assets/demo-1.png" align="center">
 <p align="center">
   <b> ~ Hyprland dotfiles ~ </b>
 </p>
@@ -15,7 +15,7 @@ A bunch of tweaks i made to make her appearance pretty much aesthetic..
 <br/>
 
 ## Info
-<img src="assets/demo-06.png" align="right" width="550">
+<img src="assets/demo-6.png" align="right" width="550">
 
 |Distro|[Arch](https://archlinux.org/)|
 |:---:|:---:|
@@ -54,13 +54,13 @@ A bunch of tweaks i made to make her appearance pretty much aesthetic..
    </table>
 
 ## Preview
-<img src="assets/demo-02.png" align="center">
+<img src="assets/demo-2.png" align="center">
 <br/>
 <br/>
-<img src="assets/demo-07.png" align="center">
+<img src="assets/demo-7.png" align="center">
 <br/>
 <br/>
-<img src="assets/demo-04.png" align="center">
+<img src="assets/demo-4.png" align="center">
 <br/>
 <br/>
 
