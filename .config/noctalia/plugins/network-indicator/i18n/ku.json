@@ -1,0 +1,101 @@
+{
+  "actions": {
+    "widget-settings": "Mîhengên widgetê",
+    "toggle-panel": "Monîtor veke/bigire"
+  },
+  "panel": {
+    "title": "Çalakiya Torê",
+    "close": "Bigire",
+    "download": "Daxistin",
+    "upload": "Barkirin"
+  },
+  "settings": {
+    "layout": {
+      "label": "Sazmon",
+      "desc": "Hucreyan di rêzê de (asayî) an di torê 2×2 de (stûnî) bicîh bike.",
+      "horizontal": "Asayî",
+      "vertical": "Stûnî"
+    },
+    "slots": {
+      "label": "Danîna Hucreyan",
+      "desc": "Hilbijêre ku her hucre çi nîşan bide. Dubare ne mumkin e. Mînak: ji bo tenê îkonan nîşan bidin hucreyan vala bihêle."
+    },
+    "slot": {
+      "txIcon": "Îkona TX",
+      "rxIcon": "Îkona RX",
+      "txSpeed": "Leza TX",
+      "rxSpeed": "Leza RX",
+      "none": "Vala"
+    },
+    "iconType": {
+      "desc": "Şêwaza îkonê ya ku ji bo nîşanderên TX/RX tê bikaranîn hilbijêre.",
+      "label": "Cureyê Îkonê"
+    },
+    "byteThresholdActive": {
+      "desc": "Trafîka li binê vê nirxê (B/s) wekî neçalak tê nîşandan.",
+      "label": "Sînorê Çalakiyê"
+    },
+    "fontSizeModifier": {
+      "desc": "Mezinahiya nivîsê li gorî ya xwerû mezin bike.",
+      "label": "Mezinahiya Tîpan"
+    },
+    "iconSizeModifier": {
+      "desc": "Mezinahiya îkonê li gorî ya xwerû mezin bike.",
+      "label": "Mezinahiya Îkonê"
+    },
+    "useCustomFont": {
+      "desc": "Fontê xwerû ji bo nirxên lezê binpê bike.",
+      "label": "Fontê Xweser"
+    },
+    "customFontFamily": {
+      "desc": "Ji bo nirxên lezê fontek hilbijêre.",
+      "label": "Font",
+      "placeholder": "Fontek hilbijêre",
+      "searchPlaceholder": "Font lêgerîn…"
+    },
+    "customFontBold": {
+      "desc": "Nirxên lezê bi qalın ve bike.",
+      "label": "Qalın"
+    },
+    "customFontItalic": {
+      "desc": "Nirxên lezê bi xwar ve bike.",
+      "label": "Xwar"
+    },
+    "useCustomColors": {
+      "desc": "Rengên xweser li şûna rengên xwerû yên temayê çalak bike.",
+      "label": "Rengên Xweser"
+    },
+    "colorTx": {
+      "desc": "Rengê îkona barkirinê (TX) dema ku ji tixûbê derbas dibe.",
+      "label": "TX Çalak"
+    },
+    "colorRx": {
+      "desc": "Rengê îkona daxistinê (RX) dema ku ji tixûbê derbas dibe.",
+      "label": "RX Çalak"
+    },
+    "colorSilent": {
+      "desc": "Rengê îkonê dema trafîk ji binê tixûbê be.",
+      "label": "Neçalak"
+    },
+    "colorText": {
+      "desc": "Rengê nivîsê ji bo nirxên lezê.",
+      "label": "Nivîs"
+    },
+    "paddingLeft": {
+      "label": "Peddinga çepê",
+      "desc": "Peddinga naverokê li aliyê çepê."
+    },
+    "paddingRight": {
+      "label": "Peddinga rastê",
+      "desc": "Peddinga naverokê li aliyê rastê."
+    },
+    "columnSpacing": {
+      "label": "Valahiya stûnan",
+      "desc": "Valahiya navbera stûnan di sazmona torê de."
+    },
+    "rowSpacing": {
+      "label": "Valahiya rêzan",
+      "desc": "Valahiya navbera rêzan di sazmona torê de (di sazmona asayî de bêbandor e)."
+    }
+  }
+}

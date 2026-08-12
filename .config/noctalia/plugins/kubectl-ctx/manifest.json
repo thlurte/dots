@@ -1,0 +1,32 @@
+{
+  "id": "kubectl-ctx",
+  "name": "Kubectl Context",
+  "version": "1.0.4",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ultherego",
+  "license": "MIT",
+  "repository": "https://github.com/noctalia-dev/noctalia-plugins",
+  "description": "Kubernetes context and namespace switcher with resource browser powered by kubectl.",
+  "tags": ["Bar", "Panel", "Utility", "Development"],
+  "entryPoints": {
+    "main": "Main.qml",
+    "barWidget": "BarWidget.qml",
+    "panel": "Panel.qml",
+    "settings": "Settings.qml",
+    "controlCenterWidget": "ControlCenterWidget.qml"
+  },
+  "dependencies": {
+    "plugins": []
+  },
+  "metadata": {
+    "defaultSettings": {
+      "kubeconfigPath": "",
+      "pollInterval": 60,
+      "showErrorBadge": true,
+      "iconColor": "none",
+      "terminal": "",
+      "panelWidth": 620,
+      "panelHeight": 680
+    }
+  }
+}

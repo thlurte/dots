@@ -1,0 +1,11 @@
+{
+  "captureEnabled": true,
+  "evtestDevice": "/dev/input/event3",
+  "position": "bottom",
+  "marginPx": 60,
+  "hideDelaySec": 2,
+  "disabledScreens": [],
+  "useCustomColors": true,
+  "pillColor": "#628478",
+  "pillBg": "#e3e8e6"
+}

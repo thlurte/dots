@@ -1,0 +1,12 @@
+{
+  "id": "bandwidth-procs",
+  "name": "Uplink",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "Which processes hold the most established sockets.",
+  "tags": ["Desktop", "Network"],
+  "entryPoints": { "desktopWidget": "DesktopWidget.qml" },
+  "metadata": { "defaultSettings": { "showBackground": false, "roundedCorners": true } }
+}

@@ -1,0 +1,34 @@
+{
+  "colorHistory": [
+    "#142A57",
+    "#0078D4"
+  ],
+  "paletteColors": "",
+  "installedLangs": [
+    "eng"
+  ],
+  "transAvailable": false,
+  "selectedOcrLang": "eng",
+  "screenshotPath": "",
+  "videoPath": "",
+  "filenameFormat": "",
+  "detectedRecorder": "wf-recorder",
+  "recordSkipConfirmation": false,
+  "recordCopyToClipboard": false,
+  "gifMaxSeconds": 30,
+  "resultHex": "#142A57",
+  "resultRgb": "rgb(20, 42, 87)",
+  "resultHsv": "hsv(220, 77%, 34%)",
+  "resultHsl": "hsl(220, 63%, 21%)",
+  "colorCapturePath": "/tmp/screen-toolkit-colorpicker.png",
+  "colorCacheBust": 1785777737052,
+  "ocrResult": "",
+  "ocrCapturePath": "",
+  "qrResult": "",
+  "qrCapturePath": "",
+  "translateResult": "",
+  "x02ApiKey": "",
+  "x02Expiry": "7d",
+  "shareSkipPopover": false,
+  "searchEngineUrl": ""
+}

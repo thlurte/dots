@@ -1,0 +1,71 @@
+{
+  "menu": {
+    "openPanel": "Moniteur de latence",
+    "settings": "Paramètres du widget"
+  },
+  "widget": {
+    "timedOut": "Délai dépassé",
+    "tooltip": {
+      "noData": "Pas encore de données de ping"
+    }
+  },
+  "panel": {
+    "title": "Moniteur de latence",
+    "close": "Fermer",
+    "window": "Fenêtre",
+    "timings": {
+      "10m": "10 min",
+      "30m": "30 min",
+      "1h": "1 heure",
+      "last": "derniers"
+    }
+  },
+  "settings": {
+    "hosts": {
+      "header": "Hôtes",
+      "desc": "Hôtes à pinger. Au moins un requis.",
+      "name": "Nom",
+      "address": "Adresse",
+      "namePlaceholder": "ex: Passerelle",
+      "addressPlaceholder": "ex: 192.168.1.1",
+      "add": "Ajouter un hôte",
+      "remove": "Supprimer"
+    },
+    "interval": {
+      "header": "Sondage",
+      "desc": "Fréquence de ping de chaque hôte.",
+      "label": "Intervalle"
+    },
+    "thresholds": {
+      "header": "Seuils",
+      "desc": "Plages de latence déterminant la couleur d'état.",
+      "good": "Bon en dessous de",
+      "warning": "Avertissement en dessous de"
+    },
+    "display": {
+      "header": "Affichage"
+    },
+    "showHostName": {
+      "label": "Afficher le nom de l'hôte dans la barre",
+      "desc": "Préfixer la valeur de latence avec le nom de l'hôte le moins performant."
+    },
+    "animations": {
+      "label": "Afficher les animations de pulsation",
+      "desc": "Pulse à chaque tick, plus rapidement en cas d'avertissement ou d'état critique"
+    },
+    "barHost": {
+      "label": "Hôte de la barre",
+      "desc": "Latence de quel hôte est affichée dans la barre.",
+      "worst": "Pire (auto)"
+    },
+    "colorGood": {
+      "label": "Couleur 'Bon'"
+    },
+    "colorWarning": {
+      "label": "Couleur 'Avertissement'"
+    },
+    "colorCritical": {
+      "label": "Couleur 'Critique'"
+    }
+  }
+}

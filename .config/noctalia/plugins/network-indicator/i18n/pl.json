@@ -1,0 +1,101 @@
+{
+  "actions": {
+    "widget-settings": "Ustawienia widgetu",
+    "toggle-panel": "Przełącz Monitor"
+  },
+  "panel": {
+    "title": "Aktywność sieciowa",
+    "close": "Zamknij",
+    "download": "Pobieranie",
+    "upload": "Wysyłanie"
+  },
+  "settings": {
+    "layout": {
+      "label": "Układ",
+      "desc": "Rozmieść komórki w rzędzie (poziomo) lub w siatce 2×2 (pionowo).",
+      "horizontal": "Poziomy",
+      "vertical": "Pionowy"
+    },
+    "slots": {
+      "label": "Przypisanie komórek",
+      "desc": "Wybierz, co wyświetla każda komórka. Duplikaty nie są możliwe. Np. użyj pustych komórek, aby wyświetlać tylko ikony."
+    },
+    "slot": {
+      "txIcon": "Ikona TX",
+      "rxIcon": "Ikona RX",
+      "txSpeed": "Prędkość TX",
+      "rxSpeed": "Prędkość RX",
+      "none": "Pusty"
+    },
+    "iconType": {
+      "desc": "Wybierz styl ikony używany dla wskaźników TX/RX.",
+      "label": "Typ Ikony"
+    },
+    "byteThresholdActive": {
+      "desc": "Ruch poniżej tej wartości (B/s) jest wyświetlany jako nieaktywny.",
+      "label": "Próg aktywności"
+    },
+    "fontSizeModifier": {
+      "desc": "Skaluj rozmiar tekstu względem domyślnego.",
+      "label": "Rozmiar czcionki"
+    },
+    "iconSizeModifier": {
+      "desc": "Skaluj rozmiar ikony względem domyślnego.",
+      "label": "Rozmiar ikony"
+    },
+    "useCustomFont": {
+      "desc": "Zastąp domyślną czcionkę dla wartości prędkości.",
+      "label": "Własna czcionka"
+    },
+    "customFontFamily": {
+      "desc": "Wybierz czcionkę dla wartości prędkości.",
+      "label": "Czcionka",
+      "placeholder": "Wybierz czcionkę",
+      "searchPlaceholder": "Szukaj czcionek…"
+    },
+    "customFontBold": {
+      "desc": "Wyświetlaj wartości prędkości pogrubionym tekstem.",
+      "label": "Pogrubiony"
+    },
+    "customFontItalic": {
+      "desc": "Wyświetlaj wartości prędkości kursywą.",
+      "label": "Kursywa"
+    },
+    "useCustomColors": {
+      "desc": "Włącz własne kolory zamiast domyślnych motywu.",
+      "label": "Własne kolory"
+    },
+    "colorTx": {
+      "desc": "Kolor ikony wysyłania (TX), gdy przekroczony jest próg.",
+      "label": "TX Aktywny"
+    },
+    "colorRx": {
+      "desc": "Kolor ikony pobierania (RX), gdy wartość przekroczy próg.",
+      "label": "RX Aktywny"
+    },
+    "colorSilent": {
+      "desc": "Kolor ikony, gdy ruch jest poniżej progu.",
+      "label": "Nieaktywne"
+    },
+    "colorText": {
+      "desc": "Kolor tekstu dla wartości prędkości.",
+      "label": "Tekst"
+    },
+    "paddingLeft": {
+      "label": "Padding lewy",
+      "desc": "Padding treści po lewej stronie."
+    },
+    "paddingRight": {
+      "label": "Padding prawy",
+      "desc": "Padding treści po prawej stronie."
+    },
+    "columnSpacing": {
+      "label": "Odstęp kolumn",
+      "desc": "Odstęp między kolumnami w układzie siatki."
+    },
+    "rowSpacing": {
+      "label": "Odstęp wierszy",
+      "desc": "Odstęp między wierszami w układzie siatki (bez efektu w układzie poziomym)."
+    }
+  }
+}

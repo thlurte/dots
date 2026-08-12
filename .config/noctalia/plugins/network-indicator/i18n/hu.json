@@ -1,0 +1,101 @@
+{
+  "actions": {
+    "widget-settings": "Widget beállítások",
+    "toggle-panel": "Monitor váltása"
+  },
+  "panel": {
+    "title": "Hálózati aktivitás",
+    "close": "Bezárás",
+    "download": "Letöltés",
+    "upload": "Feltöltés"
+  },
+  "settings": {
+    "layout": {
+      "label": "Elrendezés",
+      "desc": "Cellák elrendezése sorban (vízszintes) vagy 2×2-es rácsban (függőleges).",
+      "horizontal": "Vízszintes",
+      "vertical": "Függőleges"
+    },
+    "slots": {
+      "label": "Cellák hozzárendelése",
+      "desc": "Válaszd ki, mit jelenítsen meg az egyes cellák. Duplikátumok nem lehetségesek. Pl. üres cellákkal csak ikonok jeleníthetők meg."
+    },
+    "slot": {
+      "txIcon": "TX ikon",
+      "rxIcon": "RX ikon",
+      "txSpeed": "TX sebesség",
+      "rxSpeed": "RX sebesség",
+      "none": "Üres"
+    },
+    "iconType": {
+      "desc": "Válaszd ki az TX/RX indikátorokhoz használt ikonkészletet.",
+      "label": "Ikon típusa"
+    },
+    "byteThresholdActive": {
+      "desc": "Az e küszöbérték alatti forgalom (B/s) inaktívként jelenik meg.",
+      "label": "Aktivitási küszöbérték"
+    },
+    "fontSizeModifier": {
+      "desc": "A szövegméret skálázása az alapértelmezett mérethez képest.",
+      "label": "Betűméret"
+    },
+    "iconSizeModifier": {
+      "desc": "Az ikonméret skálázása az alapértelmezett mérethez képest.",
+      "label": "Ikonméret"
+    },
+    "useCustomFont": {
+      "desc": "Az alapértelmezett betűtípus felülírása a sebességértékekhez.",
+      "label": "Egyéni betűtípus"
+    },
+    "customFontFamily": {
+      "desc": "Válasszon betűtípust a sebességértékekhez.",
+      "label": "Betűtípus",
+      "placeholder": "Betűtípus kiválasztása",
+      "searchPlaceholder": "Betűtípusok keresése…"
+    },
+    "customFontBold": {
+      "desc": "Sebességértékek vastag betűvel.",
+      "label": "Vastag"
+    },
+    "customFontItalic": {
+      "desc": "Sebességértékek dőlt betűvel.",
+      "label": "Dőlt"
+    },
+    "useCustomColors": {
+      "desc": "Egyéni színek engedélyezése a téma alapértelmezett színei helyett.",
+      "label": "Egyéni színek"
+    },
+    "colorTx": {
+      "desc": "Feltöltés (TX) ikon színe, ha a küszöbérték felett van.",
+      "label": "TX Aktív"
+    },
+    "colorRx": {
+      "desc": "Letöltés (RX) ikon színe, ha az meghaladja a küszöbértéket.",
+      "label": "RX Aktív"
+    },
+    "colorSilent": {
+      "desc": "Ikon színe, ha a forgalom a küszöbérték alatt van.",
+      "label": "Inaktív"
+    },
+    "colorText": {
+      "desc": "Szövegszín a sebességértékekhez.",
+      "label": "Szöveg"
+    },
+    "paddingLeft": {
+      "label": "Bal oldali kitöltés",
+      "desc": "A tartalom kitöltése a bal oldalon."
+    },
+    "paddingRight": {
+      "label": "Jobb oldali kitöltés",
+      "desc": "A tartalom kitöltése a jobb oldalon."
+    },
+    "columnSpacing": {
+      "label": "Oszlopköz",
+      "desc": "Oszlopok közötti távolság a rácsos elrendezésben."
+    },
+    "rowSpacing": {
+      "label": "Sorköz",
+      "desc": "Sorok közötti távolság a rácsos elrendezésben (nincs hatása vízszintes elrendezésben)."
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "actions": {
+    "widget-settings": "Impostazioni widget",
+    "toggle-panel": "Mostra/nascondi Monitor"
+  },
+  "panel": {
+    "title": "Attività di rete",
+    "close": "Chiudi",
+    "download": "Download",
+    "upload": "Upload"
+  },
+  "settings": {
+    "layout": {
+      "label": "Layout",
+      "desc": "Disporre le celle in una riga (orizzontale) o in una griglia 2×2 (verticale).",
+      "horizontal": "Orizzontale",
+      "vertical": "Verticale"
+    },
+    "slots": {
+      "label": "Assegnazione celle",
+      "desc": "Scegli cosa mostra ogni cella. Non sono possibili duplicati. Es.: usa celle vuote per mostrare solo le icone."
+    },
+    "slot": {
+      "txIcon": "Icona TX",
+      "rxIcon": "Icona RX",
+      "txSpeed": "Velocità TX",
+      "rxSpeed": "Velocità RX",
+      "none": "Vuoto"
+    },
+    "iconType": {
+      "desc": "Scegli lo stile dell'icona usata per gli indicatori TX/RX.",
+      "label": "Tipo icona"
+    },
+    "byteThresholdActive": {
+      "desc": "Il traffico sotto questo valore (B/s) viene mostrato come inattivo.",
+      "label": "Soglia di attività"
+    },
+    "fontSizeModifier": {
+      "desc": "Scala la dimensione del testo rispetto al valore predefinito.",
+      "label": "Dimensione font"
+    },
+    "iconSizeModifier": {
+      "desc": "Scala la dimensione dell'icona rispetto al valore predefinito.",
+      "label": "Dimensione icona"
+    },
+    "useCustomFont": {
+      "desc": "Sovrascrivi il font predefinito per i valori di velocità.",
+      "label": "Font personalizzato"
+    },
+    "customFontFamily": {
+      "desc": "Scegli un font per i valori di velocità.",
+      "label": "Font",
+      "placeholder": "Seleziona un font",
+      "searchPlaceholder": "Cerca font…"
+    },
+    "customFontBold": {
+      "desc": "Visualizza i valori di velocità in grassetto.",
+      "label": "Grassetto"
+    },
+    "customFontItalic": {
+      "desc": "Visualizza i valori di velocità in corsivo.",
+      "label": "Corsivo"
+    },
+    "useCustomColors": {
+      "desc": "Attiva i colori personalizzati invece dei colori predefiniti del tema.",
+      "label": "Colori personalizzati"
+    },
+    "colorTx": {
+      "desc": "Colore dell'icona di upload (TX) quando sopra la soglia.",
+      "label": "TX Attivo"
+    },
+    "colorRx": {
+      "desc": "Colore dell'icona di download (RX) quando sopra la soglia.",
+      "label": "RX Attivo"
+    },
+    "colorSilent": {
+      "desc": "Colore dell'icona quando il traffico è sotto la soglia.",
+      "label": "Inattivo"
+    },
+    "colorText": {
+      "desc": "Colore del testo per i valori di velocità.",
+      "label": "Testo"
+    },
+    "paddingLeft": {
+      "label": "Padding sinistro",
+      "desc": "Padding del contenuto a sinistra."
+    },
+    "paddingRight": {
+      "label": "Padding destro",
+      "desc": "Padding del contenuto a destra."
+    },
+    "columnSpacing": {
+      "label": "Spaziatura colonne",
+      "desc": "Spaziatura tra le colonne nel layout a griglia."
+    },
+    "rowSpacing": {
+      "label": "Spaziatura righe",
+      "desc": "Spaziatura tra le righe nel layout a griglia (senza effetto nel layout orizzontale)."
+    }
+  }
+}

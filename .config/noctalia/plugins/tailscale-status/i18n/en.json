@@ -1,0 +1,16 @@
+{
+  "widget": {
+    "title": "Tailscale",
+    "loading": "Loading…",
+    "missing": "tailscale not installed",
+    "offline": "Disconnected",
+    "online": "Connected",
+    "needs-login": "Needs login",
+    "no-ip": "—",
+    "peers": "%1 online · %2 peers",
+    "exit-node": "Exit · %1",
+    "connect": "Connect",
+    "disconnect": "Disconnect",
+    "copied": "Copied %1"
+  }
+}

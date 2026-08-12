@@ -1,0 +1,38 @@
+{
+  "widget": {
+    "tooltip": "SSH Sessions"
+  },
+  "bar": {
+    "noSessions": "Keine aktiven SSH Sitzungen",
+    "oneSession": "1 aktive SSH Sitzung",
+    "multipleSessions": "aktive SSH Sitzungen"
+  },
+  "panel": {
+    "activeSessions": "Aktive Sitzungen",
+    "hosts": "Hosts",
+    "search": "Hosts suchen...",
+    "noActive": "Keine aktiven Sitzungen",
+    "noHosts": "Keine Hosts in ~/.ssh/config",
+    "refresh": "Aktualisieren",
+    "settings": "Einstellungen"
+  },
+  "launcher": {
+    "name": "SSH",
+    "description": "Mit SSH Host verbinden"
+  },
+  "settings": {
+    "terminal": "Terminal",
+    "terminalDetected": "Automatisch erkanntes Terminal: {terminal}",
+    "terminalNone": "Es wurde kein Terminalemulator erkannt",
+    "terminalOverride": "Terminal Befehl",
+    "terminalOverrideDesc": "Leer lassen, um das automatisch erkannte Terminal zu verwenden",
+    "pollInterval": "Abfrageintervall",
+    "pollIntervalDesc": "Sekunden zwischen den Sitzungsprüfungen: ",
+    "showInactiveHosts": "Inaktive Hosts anzeigen",
+    "showInactiveHostsDesc": "Hosts ohne aktive Sitzungen im Panel anzeigen"
+  },
+  "context": {
+    "refresh": "Aktualisieren",
+    "settings": "Einstellungen"
+  }
+}

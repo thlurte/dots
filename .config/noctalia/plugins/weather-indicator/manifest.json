@@ -1,0 +1,29 @@
+{
+  "id": "weather-indicator",
+  "name": "Weather Indicator",
+  "version": "1.1.7",
+  "minNoctaliaVersion": "4.6.8",
+  "author": "Sovereign",
+  "license": "MIT",
+  "repository": "https://github.com/noctalia-dev/noctalia-plugins",
+  "description": "Shows the current weather condition and temperature.",
+  "tags": ["Bar"],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml",
+    "panel": "Panel.qml",
+    "controlCenterWidget": "ControlCenterWidget.qml",
+    "settings": "Settings.qml"
+  },
+  "dependencies": {
+    "plugins": []
+  },
+  "metadata": {
+    "defaultSettings": {
+      "showTempValue": true,
+      "showTempUnit": true,
+      "showConditionIcon": true,
+      "tooltipOption": "everything",
+      "customColor": "none"
+    }
+  }
+}

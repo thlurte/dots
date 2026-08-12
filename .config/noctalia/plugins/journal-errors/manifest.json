@@ -1,0 +1,12 @@
+{
+  "id": "journal-errors",
+  "name": "Journal Errors",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "Last journal lines at priority err or worse.",
+  "tags": ["Desktop", "System"],
+  "entryPoints": { "desktopWidget": "DesktopWidget.qml" },
+  "metadata": { "defaultSettings": { "showBackground": false, "roundedCorners": true } }
+}

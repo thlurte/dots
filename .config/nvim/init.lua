@@ -1,97 +1,14 @@
---[[
-
-=====================================================================
-==================== READ THIS BEFORE CONTINUING ====================
-=====================================================================
-========                                    .-----.          ========
-========         .----------------------.   | === |          ========
-========         |.-""""""""""""""""""-.|   |-----|          ========
-========         ||                    ||   | === |          ========
-========         ||   KICKSTART.NVIM   ||   |-----|          ========
-========         ||                    ||   | === |          ========
-========         ||                    ||   |-----|          ========
-========         ||:Tutor              ||   |:::::|          ========
-========         |'-..................-'|   |____o|          ========
-========         `"")----------------(""`   ___________      ========
-========        /::::::::::|  |::::::::::\  \ no mouse \     ========
-========       /:::========|  |==hjkl==:::\  \ required \    ========
-========      '""""""""""""'  '""""""""""""'  '""""""""""'   ========
-========                                                     ========
-=====================================================================
-=====================================================================
-
-What is Kickstart?
-
-  Kickstart.nvim is *not* a distribution.
-
-  Kickstart.nvim is a starting point for your own configuration.
-    The goal is that you can read every line of code, top-to-bottom, understand
-    what your configuration is doing, and modify it to suit your needs.
-
-    Once you've done that, you can start exploring, configuring and tinkering to
-    make Neovim your own! That might mean leaving Kickstart just the way it is for a while
-    or immediately breaking it into modular pieces. It's up to you!
-
-    If you don't know anything about Lua, I recommend taking some time to read through
-    a guide. One possible example which will only take 10-15 minutes:
-      - https://learnxinyminutes.com/docs/lua/
-
-    After understanding a bit more about Lua, you can use `:help lua-guide` as a
-    reference for how Neovim integrates Lua.
-    - :help lua-guide
-    - (or HTML version): https://neovim.io/doc/user/lua-guide.html
-
-Kickstart Guide:
-
-  TODO: The very first thing you should do is to run the command `:Tutor` in Neovim.
-
-    If you don't know what this means, type the following:
-      - <escape key>
-      - :
-      - Tutor
-      - <enter key>
-
-    (If you already know the Neovim basics, you can skip this step.)
-
-  Once you've completed that, you can continue working through **AND READING** the rest
-  of the kickstart init.lua.
-
-  Next, run AND READ `:help`.
-    This will open up a help window with some basic information
-    about reading, navigating and searching the builtin help documentation.
-
-    This should be the first place you go to look when you're stuck or confused
-    with something. It's one of my favorite Neovim features.
-
-    MOST IMPORTANTLY, we provide a keymap "<space>sh" to [s]earch the [h]elp documentation,
-    which is very useful when you're not exactly sure of what you're looking for.
-
-  I have left several `:help X` comments throughout the init.lua
-    These are hints about where to find more information about the relevant settings,
-    plugins or Neovim features used in Kickstart.
-
-   NOTE: Look for lines like this
-
-    Throughout the file. These are for you, the reader, to help you understand what is happening.
-    Feel free to delete them once you know what you're doing, but they should serve as a guide
-    for when you are first encountering a few different constructs in your Neovim config.
-
-If you experience any errors while trying to install kickstart, run `:checkhealth` for more info.
-
-I hope you enjoy your Neovim journey,
-- TJ
-
-P.S. You can delete this when you're done too. It's your config now! :)
---]]
-
--- Set <space> as the leader key
--- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+vim.o.expandtab = true
+vim.o.shiftwidth = 2
+vim.o.softtabstop = 2
+vim.o.tabstop = 2
+
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
@@ -127,6 +44,10 @@ vim.o.undofile = true
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.o.ignorecase = true
 vim.o.smartcase = true
+
+vim.keymap.set('n', '<leader>w', '<cmd>w<CR>', { desc = 'Write buffer' })
+vim.keymap.set('n', '<leader>x', '<cmd>x<CR>', { desc = 'Save and quit' })
+vim.keymap.set('n', '<leader>Q', '<cmd>qa!<CR>', { desc = 'Force quit all' })
 
 -- Keep signcolumn on by default
 vim.o.signcolumn = 'yes'
@@ -165,7 +86,11 @@ vim.o.scrolloff = 10
 -- instead raise a dialog asking if you wish to save the current file(s)
 -- See `:help 'confirm'`
 vim.o.confirm = true
+vim.o.relativenumber = true
 
+vim.g.netrw_banner = 0
+vim.g.netrw_liststyle = 3 -- tree view
+vim.g.netrw_winsize = 25
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -173,6 +98,8 @@ vim.o.confirm = true
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+-- Open New file explorer
+vim.keymap.set('n', '<leader>e', '<cmd>Ex<CR>', { desc = 'Open file explorer (netrw)' })
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
@@ -234,6 +161,112 @@ end
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
+vim.api.nvim_create_user_command('CppInit', function(opts)
+  local project_name = opts.args
+  if project_name == '' then
+    print 'Error: You must provide a project name. Usage: :CppInit <name>'
+    return
+  end
+
+  local cwd = vim.fn.getcwd()
+  local project_dir = cwd .. '/' .. project_name
+
+  -- 1. Create directories
+  vim.fn.mkdir(project_dir .. '/src', 'p')
+  vim.fn.mkdir(project_dir .. '/include/' .. project_name, 'p')
+  vim.fn.mkdir(project_dir .. '/tests', 'p')
+
+  -- 2. Write CMakeLists.txt
+  local cmake_content = string.format(
+    [[
+cmake_minimum_required(VERSION 3.15)
+project(%s VERSION 1.0.0 LANGUAGES CXX)
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+add_executable(${PROJECT_NAME} src/main.cpp)
+target_include_directories(${PROJECT_NAME} PUBLIC 
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    include
+)
+]],
+    project_name
+  )
+
+  local f_cmake = io.open(project_dir .. '/CMakeLists.txt', 'w')
+  f_cmake:write(cmake_content)
+  f_cmake:close()
+
+  -- 3. Write main.cpp
+  local cpp_content = string.format(
+    [[
+#include <iostream>
+
+int main() {
+    std::cout << "Project %s initialized successfully.\n";
+    return 0;
+}
+]],
+    project_name
+  )
+
+  local f_cpp = io.open(project_dir .. '/src/main.cpp', 'w')
+  f_cpp:write(cpp_content)
+  f_cpp:close()
+
+  -- 4. Write .gitignore
+  local f_git = io.open(project_dir .. '/.gitignore', 'w')
+  f_git:write 'build/\ncompile_commands.json\n.cache/\n'
+  f_git:close()
+
+  -- 5. Execute CMake and create symlink
+  print('Generating build system for ' .. project_name .. '...')
+  local cmd = string.format('cd %s && cmake -S . -B build && ln -sf build/compile_commands.json .', project_dir)
+  vim.fn.system(cmd)
+
+  -- 6. Switch Neovim to the new project and open main.cpp
+  vim.cmd('cd ' .. project_dir)
+  vim.cmd 'edit src/main.cpp'
+
+  -- Restart clangd to ensure it picks up the new workspace
+  vim.cmd 'LspRestart clangd'
+
+  print('Project ' .. project_name .. ' is ready.')
+end, {
+  nargs = 1,
+  desc = 'Initialize a modern C++ CMake project',
+})
+
+vim.keymap.set('n', '<leader>cr', function()
+  -- 1. Save all open files
+  vim.cmd 'wa'
+
+  -- 2. Extract the project name from the current folder name
+  local exe_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':t')
+
+  -- 3. Construct the build and run command
+  local cmd = string.format('cmake --build build && ./build/%s', exe_name)
+
+  -- 4. Open a vertical split, run the command in a terminal, and switch to insert mode
+  vim.cmd('vsplit | term ' .. cmd)
+  vim.cmd 'startinsert'
+end, { desc = '[C]ompile and [R]un C++ Project' })
+
+vim.keymap.set('n', '<leader>ct', function()
+  -- 1. Save all open files
+  vim.cmd 'wa'
+
+  -- 2. Construct the build and test command (matches your CMake setup)
+  local cmd = 'cmake --build build && ./build/run_tests'
+
+  -- 3. Open a vertical split, run the command in a terminal, and switch to insert mode
+  vim.cmd('vsplit | term ' .. cmd)
+  vim.cmd 'startinsert'
+end, { desc = '[C]ompile and [T]est C++ Project' })
+
 -- [[ Configure and install plugins ]]
 --
 --  To check the current status of your plugins, run
@@ -260,6 +293,15 @@ require('lazy').setup({
   -- If you prefer to call `setup` explicitly, use:
   --    {
   --        'lewis6991/gitsigns.nvim',
+  'tpope/vim-fugitive',
+  {
+    'nickjvandyke/opencode.nvim',
+    config = function()
+      vim.keymap.set('n', '<leader>o', function()
+        require('opencode').toggle()
+      end, { desc = 'OpenCode' })
+    end,
+  },
   --        config = function()
   --            require('gitsigns').setup({
   --                -- Your gitsigns configuration here
@@ -378,6 +420,9 @@ require('lazy').setup({
       },
       { 'nvim-telescope/telescope-ui-select.nvim' },
 
+      -- Project/workspace management
+      { 'natecraddock/workspaces.nvim' },
+
       -- Useful for getting pretty icons, but requires a Nerd Font.
       { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
     },
@@ -424,7 +469,53 @@ require('lazy').setup({
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
 
-      -- See `:help telescope.builtin`
+      -- Workspaces: explicit project list
+      local workspaces = require 'workspaces'
+      workspaces.setup {
+        hooks = {
+          open = { 'Telescope find_files' },
+        },
+      }
+
+      -- Add projects one by one
+      local projects = {
+        { name = 'ama', path = '~/work/ama' },
+        { name = 'cirkare', path = '~/work/cirkare' },
+        { name = 'demo', path = '~/work/demo' },
+        { name = 'ent-search-backend', path = '~/work/ent-search-backend' },
+        { name = 'ent-search-frontend', path = '~/work/ent-search-frontend' },
+        { name = 'events', path = '~/work/events' },
+        { name = 'gnoril', path = '~/work/gnoril' },
+        { name = 'gnoril-core-services', path = '~/work/gnoril-core-services' },
+        { name = 'grasp', path = '~/work/grasp' },
+        { name = 'grasp-be', path = '~/work/grasp-be' },
+        { name = 'idb-training', path = '~/work/idb-training' },
+        { name = 'inte', path = '~/work/inte' },
+        { name = 'labs4brands', path = '~/work/labs4brands' },
+        { name = 'meow', path = '~/work/meow' },
+        { name = 'openclaw-mcp-platform', path = '~/work/openclaw-mcp-platform' },
+        { name = 'planning-mapper', path = '~/work/planning-mapper' },
+        { name = 'Price-Optimizer-BE', path = '~/work/Price-Optimizer-BE' },
+        { name = 'qcollection-tanderrum-backend', path = '~/work/qcollection-tanderrum-backend' },
+        { name = 'qcollection-tanderrum-frontend', path = '~/work/qcollection-tanderrum-frontend' },
+        { name = 'rad', path = '~/work/rad' },
+        { name = 'tanderrum-agentic-erp', path = '~/work/tanderrum-agentic-erp' },
+        { name = 'tanderrum-backend', path = '~/work/tanderrum-backend' },
+        { name = 'tanderrum-erp', path = '~/work/tanderrum-erp' },
+        -- Personal
+        { name = 'components', path = '~/personal/components' },
+        { name = 'dots', path = '~/personal/dots' },
+        { name = 'go', path = '~/personal/go' },
+        { name = 'kaleidoscope', path = '~/personal/kaleidoscope' },
+        { name = 'memes', path = '~/personal/memes' },
+        { name = 'nucleus', path = '~/personal/nucleus' },
+        { name = 'vanilla', path = '~/personal/vanilla' },
+      }
+      for _, project in ipairs(projects) do
+        workspaces.add(project.path, project.name)
+      end
+
+      vim.keymap.set('n', '<leader>pp', '<cmd>Telescope workspaces<CR>', { desc = '[P]rojects' })
       local builtin = require 'telescope.builtin'
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
@@ -459,6 +550,18 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[S]earch [N]eovim files' })
+
+      -- Fugitive keybindings
+      vim.keymap.set('n', '<leader>gs', '<cmd>Git<CR>', { desc = '[G]it [S]tatus' })
+      vim.keymap.set('n', '<leader>gd', '<cmd>Gdiffsplit<CR>', { desc = '[G]it [D]iff split' })
+      vim.keymap.set('n', '<leader>gD', '<cmd>Gdiff HEAD~1<CR>', { desc = '[G]it [D]iff vs HEAD~1' })
+      vim.keymap.set('n', '<leader>gl', '<cmd>Gclog<CR>', { desc = '[G]it [L]og' })
+      vim.keymap.set('n', '<leader>gw', '<cmd>Gwrite<CR>', { desc = '[G]it [W]rite (stage file)' })
+      vim.keymap.set('n', '<leader>gr', '<cmd>Gread<CR>', { desc = '[G]it [R]ead (revert file)' })
+      vim.keymap.set('n', '<leader>gc', '<cmd>Git commit<CR>', { desc = '[G]it [C]ommit' })
+      vim.keymap.set('n', '<leader>gp', '<cmd>Git push<CR>', { desc = '[G]it [P]ush' })
+      vim.keymap.set('n', '<leader>gb', '<cmd>Git blame<CR>', { desc = '[G]it [B]lame' })
+      vim.keymap.set('n', '<leader>gf', '<cmd>Git diff --name-only<CR>', { desc = '[G]it [F]iles changed' })
     end,
   },
 
@@ -671,6 +774,22 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
+        clangd = {
+          cmd = {
+            'clangd',
+            '--background-index',
+            '--clang-tidy',
+            '--header-insertion=iwyu',
+            '--completion-style=detailed',
+            '--function-arg-placeholders',
+            '--fallback-style=llvm',
+          },
+          init_options = {
+            usePlaceholders = true,
+            completeUnimported = true,
+            clangdFileStatus = true,
+          },
+        },
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
@@ -756,7 +875,7 @@ require('lazy').setup({
         -- Disable "format_on_save lsp_fallback" for languages that don't
         -- have a well standardized coding style. You can add additional
         -- languages here or re-enable it for the disabled ones.
-        local disable_filetypes = { c = true, cpp = true }
+        local disable_filetypes = {}
         if disable_filetypes[vim.bo[bufnr].filetype] then
           return nil
         else
@@ -768,13 +887,68 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        cpp = { 'clang-format' },
         -- Conform can also run multiple formatters sequentially
-        -- python = { "isort", "black" },
+        python = { 'isort', 'black' },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
       },
     },
+  },
+
+  {
+    'stevearc/oil.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    opts = {
+      -- This is where your configuration goes
+      view_options = {
+        show_hidden = true,
+      },
+    },
+    config = function()
+      require('oil').setup()
+      vim.keymap.set('n', '-', '<cmd>Oil<CR>', { desc = 'Open parent directory' })
+    end,
+  },
+
+  -- 2. Debugging (DAP)
+  {
+    'mfussenegger/nvim-dap',
+    dependencies = {
+      'rcarriga/nvim-dap-ui',
+      'nvim-neotest/nvim-nio',
+    },
+    config = function()
+      local dap, dapui = require 'dap', require 'dapui'
+      dapui.setup()
+      dap.listeners.before.attach.dapui_config = function()
+        dapui.open()
+      end
+      dap.listeners.before.launch.dapui_config = function()
+        dapui.open()
+      end
+      dap.listeners.before.event_terminated.dapui_config = function()
+        dapui.close()
+      end
+
+      -- Keymaps for debugging
+      vim.keymap.set('n', '<F5>', dap.continue)
+      vim.keymap.set('n', '<F10>', dap.step_over)
+      vim.keymap.set('n', '<F11>', dap.step_into)
+    end,
+  },
+
+  -- 3. Testing
+  {
+    'nvim-neotest/neotest',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'nvim-treesitter/nvim-treesitter',
+    },
+    config = function()
+      require('neotest').setup {}
+    end,
   },
 
   { -- Autocompletion
@@ -944,7 +1118,7 @@ require('lazy').setup({
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
+      ensure_installed = { 'bash', 'c', 'diff', 'cpp', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
@@ -962,6 +1136,19 @@ require('lazy').setup({
     --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
     --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
     --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+  },
+  {
+    'Civitasv/cmake-tools.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require('cmake-tools').setup {
+        cmake_build_directory = 'build', -- Puts build files in /build
+        cmake_generate_options = {
+          '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON', -- Forces generation every time
+        },
+        cmake_soft_link_compile_commands = true, -- Automatically symlinks it to root!
+      }
+    end,
   },
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
@@ -1012,5 +1199,6 @@ require('lazy').setup({
   },
 })
 
+-- OpenCode AI assistant
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

@@ -1,0 +1,30 @@
+{
+  "id": "ssh-sessions",
+  "name": "SSH Sessions",
+  "version": "1.1.2",
+  "minNoctaliaVersion": "3.6.0",
+  "author": "adriamartin91",
+  "license": "MIT",
+  "repository": "https://github.com/noctalia-dev/noctalia-plugins",
+  "description": "Manage SSH connections from ~/.ssh/config with active session detection and launcher integration.",
+  "tags": ["Bar", "Panel", "Launcher", "Utility", "Development"],
+  "entryPoints": {
+    "main": "Main.qml",
+    "barWidget": "BarWidget.qml",
+    "panel": "Panel.qml",
+    "launcherProvider": "LauncherProvider.qml",
+    "settings": "Settings.qml",
+    "desktopWidget": "DesktopWidget.qml"
+  },
+  "dependencies": {
+    "plugins": []
+  },
+  "metadata": {
+    "commandPrefix": "ssh",
+    "defaultSettings": {
+      "terminalCommand": "",
+      "pollInterval": 10,
+      "showInactiveHosts": true
+    }
+  }
+}

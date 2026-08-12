@@ -1,0 +1,12 @@
+{
+  "id": "systemd-failed",
+  "name": "Failed Units",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "Desktop widget listing failed systemd units.",
+  "tags": ["Desktop", "System"],
+  "entryPoints": { "desktopWidget": "DesktopWidget.qml" },
+  "metadata": { "defaultSettings": { "showBackground": false, "roundedCorners": true } }
+}

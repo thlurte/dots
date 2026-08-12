@@ -1,0 +1,261 @@
+{
+    "sources": [
+        {
+            "enabled": true,
+            "name": "Noctalia Plugins",
+            "url": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        {
+            "enabled": true,
+            "name": "Community",
+            "url": "https://github.com/noctalia-dev/community-plugins"
+        }
+    ],
+    "states": {
+        "activate-linux": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "air-quality": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "auth-failures": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "bandwidth-procs": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "conntrack-top": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "dev-ports": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "dns-status": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "docker-health": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "journal-errors": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "link-status": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "net-errors": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "nftables-status": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "oom-kills": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "psi-pressure": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "systemd-failed": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "battery-monitor-plus": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "catwalk": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "clipper": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "cloudflare-warp": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "cookie-clock": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "custom-sticker": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "fancy-audiovisualizer": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "habitica": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "hot-corners": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "ip-monitor": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "keybind-cheatsheet": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "kubectl-ctx": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "latency-monitor": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "mini-docker": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "mpd": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "mullvad": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "network-indicator": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "network-manager-vpn": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "noctalia-supergfxctl": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "obsidian-provider": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "polkit-agent": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "pomodoro": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "public-ip": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "port-monitor": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "privacy-indicator": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "screen-toolkit": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "screenshot": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "show-keys": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "ssh-sessions": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "sys-info-widget": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "tailscale": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "tailscale-mesh": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "tailscale-status": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "tcp-health": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "usb-drive-manager": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "weather-indicator": {
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "world-clock": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "amd-igpu": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "cpu-freq": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "mem-swap": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "nvidia-gpu": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "ollama-status": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "thermals": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "socket-map": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "rss-feeds": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "twitter-feeds": {
+            "enabled": true,
+            "sourceUrl": ""
+        }
+    },
+    "version": 2
+}

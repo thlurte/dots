@@ -1,0 +1,22 @@
+{
+  "id": "public-ip",
+  "name": "Public IP",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "Floating desktop widget that shows your public IP address.",
+  "tags": ["Desktop", "Network"],
+  "entryPoints": {
+    "desktopWidget": "DesktopWidget.qml"
+  },
+  "dependencies": {
+    "plugins": []
+  },
+  "metadata": {
+    "defaultSettings": {
+      "showBackground": false,
+      "roundedCorners": true
+    }
+  }
+}

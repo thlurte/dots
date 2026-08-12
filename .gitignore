@@ -1,0 +1,26 @@
+# LibreOffice / editor lock files
+**/.~lock*
+**/*~
+
+# Font cache noise
+.fonts/.uuid
+
+# Unused Noctalia v5 leftover
+.config/noctalia/luau-plugins/
+
+# OS junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Secrets / local identity
+.config/noctalia/plugins/habitica/settings.json
+.config/noctalia/plugins/**/secrets.json
+.config/noctalia/plugins/**/*token*
+.fonts/.uuid
+
+# Large / local-only plugin noise (optional clipboard DB etc.)
+.config/noctalia/plugins/clipper/**/db/
+.config/noctalia/plugins/clipper/**/*.db
+.config/noctalia/plugins/clipper/**/history*

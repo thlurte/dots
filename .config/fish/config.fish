@@ -1,4 +1,3 @@
-source /usr/share/cachyos-fish-config/cachyos-config.fish
 
 # overwrite greeting
 # potentially disabling fastfetch
@@ -7,8 +6,11 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 #end
 fish_add_path /home/ahmed/.pixi/bin
 
-if status is-interactive
-    if not set -q SSH_AUTH_SOCK
-        eval (ssh-agent -c)
-    end
-end
+
+# opencode
+fish_add_path /home/ahmed/.opencode/bin
+
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/home/ahmed/.local/bin" $PATH

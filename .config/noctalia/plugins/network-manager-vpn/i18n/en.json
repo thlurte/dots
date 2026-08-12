@@ -1,0 +1,40 @@
+{
+  "panel": {
+    "emptyTitle": "No VPN found",
+    "emptyDescription": "Use Network Manager to add a VPN"
+  },
+  "toast": {
+    "connectedTo": "Connected to {name}",
+    "disconnectedFrom": "Disconnected from {name}",
+    "connectionError": "Failed to connect {name}",
+    "disconnectionError": "Failed to disconnect {name}",
+    "vpnRemoved": "VPN \"{name}\" removed",
+    "vpnRemoveError": "Failed to remove VPN \"{name}\""
+  },
+  "settings": {
+    "pluginSettings": "Plugin settings",
+    "connectedColor": "Connected color",
+    "connectedColorDescription": "Chose the color to use for icon and text when connected",
+    "disconnectedColor": "Disconnected color",
+    "disconnectedColorDescription": "Chose the color to use for icon and text when disconnected",
+    "vpnConnections": "VPN Connections",
+    "noVpnConnections": "No VPN connections configured.",
+    "addVpn": "Add VPN",
+    "addWireguard": "Add WireGuard",
+    "disableToastNotifications": "Disable toast notifications",
+    "disableToastNotificationsDescription": "Do not show toast notifications when a VPN connects or disconnects"
+  },
+  "common": {
+    "vpn": "VPN",
+    "refresh": "Refresh",
+    "connected": "Connected",
+    "disconnected": "Disconnected",
+    "connect": "Connect",
+    "disconnect": "Disconnect",
+    "close": "Close",
+    "settings": "Settings",
+    "edit": "Edit",
+    "delete": "Delete",
+    "cancel": "Cancel"
+  }
+}

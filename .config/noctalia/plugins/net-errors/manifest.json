@@ -1,0 +1,12 @@
+{
+  "id": "net-errors",
+  "name": "Link Errors",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "NIC rx/tx errors and drops on the active uplink.",
+  "tags": ["Desktop", "Network"],
+  "entryPoints": { "desktopWidget": "DesktopWidget.qml" },
+  "metadata": { "defaultSettings": { "showBackground": false, "roundedCorners": true } }
+}

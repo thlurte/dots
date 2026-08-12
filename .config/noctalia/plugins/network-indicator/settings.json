@@ -1,0 +1,26 @@
+{
+  "iconType": "caret",
+  "byteThresholdActive": 5000,
+  "fontSizeModifier": 0.75,
+  "iconSizeModifier": 1,
+  "useCustomColors": true,
+  "useCustomFont": false,
+  "customFontBold": false,
+  "customFontItalic": false,
+  "columnSpacing": 0,
+  "rowSpacing": -8,
+  "paddingLeft": 5,
+  "paddingRight": 0,
+  "layout": "vertical",
+  "slots": [
+    "txSpeed",
+    "txIcon",
+    "rxSpeed",
+    "rxIcon"
+  ],
+  "customFontFamily": "",
+  "colorTx": "#5a7270",
+  "colorRx": "#628478",
+  "colorSilent": "#d8dedc",
+  "colorText": "#515654"
+}

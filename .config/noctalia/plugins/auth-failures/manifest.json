@@ -1,0 +1,12 @@
+{
+  "id": "auth-failures",
+  "name": "Auth Failures",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "Recent sshd / login failures from the journal.",
+  "tags": ["Desktop", "Security"],
+  "entryPoints": { "desktopWidget": "DesktopWidget.qml" },
+  "metadata": { "defaultSettings": { "showBackground": false, "roundedCorners": true } }
+}

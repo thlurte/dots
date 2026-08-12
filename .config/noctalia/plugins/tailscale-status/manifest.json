@@ -1,0 +1,22 @@
+{
+  "id": "tailscale-status",
+  "name": "Tailscale Status",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "Floating desktop widget for Tailscale IP, peers, and connect/disconnect.",
+  "tags": ["Desktop", "Network"],
+  "entryPoints": {
+    "desktopWidget": "DesktopWidget.qml"
+  },
+  "dependencies": {
+    "plugins": []
+  },
+  "metadata": {
+    "defaultSettings": {
+      "showBackground": false,
+      "roundedCorners": true
+    }
+  }
+}

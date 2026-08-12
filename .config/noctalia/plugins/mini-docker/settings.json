@@ -1,0 +1,7 @@
+{
+  "refreshInterval": 5000,
+  "iconColor": "tertiary",
+  "statusState": "all",
+  "activeColor": "tertiary",
+  "inactiveColor": "secondary"
+}

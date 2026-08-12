@@ -1,0 +1,33 @@
+{
+  "widget": {
+    "tooltip": "Port Monitor"
+  },
+  "bar": {
+    "noPorts": "No listening ports",
+    "ports": "{count} listening port",
+    "ports-plural": "{count} listening ports"
+  },
+  "panel": {
+    "noPorts": "No listening ports",
+    "refresh": "Refresh",
+    "portNumber": ":{port}",
+    "processInfo": "{name} (PID {pid})",
+    "unknownProcess": "\u2014",
+    "confirmKill": "Kill process on port {port}?",
+    "confirmKillSystem": "Kill system process on port {port}? This will open a terminal with sudo.",
+    "confirm": "Confirm",
+    "cancel": "Cancel"
+  },
+  "settings": {
+    "refreshInterval": "Refresh interval",
+    "refreshIntervalDesc": "Seconds between port scans: {value}",
+    "hideSystemPorts": "Hide system ports",
+    "hideSystemPortsDesc": "Exclude ports below 1024",
+    "hideWhenEmpty": "Hide when empty",
+    "hideWhenEmptyDesc": "Hide bar widget when no ports are listening"
+  },
+  "context": {
+    "refresh": "Refresh",
+    "settings": "Settings"
+  }
+}

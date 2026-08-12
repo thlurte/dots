@@ -1,0 +1,33 @@
+{
+  "id": "network-manager-vpn",
+  "name": "Network Manager VPN",
+  "version": "1.3.0",
+  "minNoctaliaVersion": "3.6.0",
+  "author": "nZO",
+  "license": "MIT",
+  "repository": "https://github.com/noctalia-dev/noctalia-plugins",
+  "description": "Connect to VPN via NetworkManager",
+  "tags": [
+    "Bar",
+    "Panel",
+    "Network"
+  ],
+  "entryPoints": {
+    "main": "Main.qml",
+    "barWidget": "BarWidget.qml",
+    "controlCenterWidget": "ControlCenterWidget.qml",
+    "panel": "Panel.qml",
+    "settings": "Settings.qml"
+  },
+  "dependencies": {
+    "plugins": []
+  },
+  "metadata": {
+    "defaultSettings": {
+      "displayMode": "onhover",
+      "disconnectedColor": "none",
+      "connectedColor": "primary",
+      "disableToastNotifications": false
+    }
+  }
+}

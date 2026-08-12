@@ -1,0 +1,12 @@
+{
+  "id": "nftables-status",
+  "name": "Firewall",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "nftables default policy and recent packet drops.",
+  "tags": ["Desktop", "Network", "Security"],
+  "entryPoints": { "desktopWidget": "DesktopWidget.qml" },
+  "metadata": { "defaultSettings": { "showBackground": false, "roundedCorners": true } }
+}

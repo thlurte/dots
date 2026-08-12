@@ -1,0 +1,12 @@
+{
+  "id": "ollama-status",
+  "name": "Ollama",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "Loaded models and local catalog.",
+  "tags": ["Desktop", "Development"],
+  "entryPoints": { "desktopWidget": "DesktopWidget.qml" },
+  "metadata": { "defaultSettings": { "showBackground": false, "roundedCorners": true } }
+}

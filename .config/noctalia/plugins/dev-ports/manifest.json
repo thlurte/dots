@@ -1,0 +1,12 @@
+{
+  "id": "dev-ports",
+  "name": "Dev Ports",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "Listening dev ports with one-click kill.",
+  "tags": ["Desktop", "Network", "Development"],
+  "entryPoints": { "desktopWidget": "DesktopWidget.qml" },
+  "metadata": { "defaultSettings": { "showBackground": false, "roundedCorners": true } }
+}

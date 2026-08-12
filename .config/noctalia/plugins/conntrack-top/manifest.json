@@ -1,0 +1,12 @@
+{
+  "id": "conntrack-top",
+  "name": "Active Sockets",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "Top remote IPs from established TCP sockets.",
+  "tags": ["Desktop", "Network"],
+  "entryPoints": { "desktopWidget": "DesktopWidget.qml" },
+  "metadata": { "defaultSettings": { "showBackground": false, "roundedCorners": true } }
+}

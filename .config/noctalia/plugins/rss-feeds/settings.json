@@ -1,0 +1,34 @@
+{
+  "showBackground": false,
+  "roundedCorners": true,
+  "maxItems": 20,
+  "refreshSeconds": 60,
+  "feeds": [
+    {
+      "name": "Cameronr Wolfe",
+      "url": "https://cameronrwolfe.substack.com/feed",
+      "enabled": true
+    },
+    {
+      "name": "RecSys",
+      "url": "https://recsys.substack.com/feed",
+      "enabled": true
+    },
+    {
+      "name": "Turing Post",
+      "url": "https://turingpost.substack.com/feed",
+      "enabled": true
+    },
+    {
+      "name": "Elvis Saravia",
+      "url": "https://nlp.elvissaravia.com/feed",
+      "enabled": true
+    },
+    {
+      "name": "Llm Watch",
+      "url": "https://www.llmwatch.com/feed",
+      "enabled": true
+    }
+  ],
+  "previewItems": 5
+}

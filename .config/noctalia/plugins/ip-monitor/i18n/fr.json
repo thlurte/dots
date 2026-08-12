@@ -1,0 +1,62 @@
+{
+  "menu": {
+    "settings": "Paramètres du widget"
+  },
+  "panel": {
+    "details": {
+      "title": "Détails",
+      "ip": "Adresse IP",
+      "city": "Ville",
+      "country": "Pays",
+      "region": "Région",
+      "continent": "Continent",
+      "postal-code": "Code postal",
+      "location": "Emplacement",
+      "timezone": "Fuseau horaire",
+      "currency": "Devise",
+      "org": "Organisation",
+      "as-name": "Nom AS"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "title": "Apparence"
+    },
+    "iconColor": {
+      "desc": "Couleur de l'icône lorsque l'adresse IP est récupérée avec succès",
+      "label": "Couleur de l'icône"
+    },
+    "stateIcons": {
+      "title": "Icônes d'état"
+    },
+    "successIcon": {
+      "desc": "Icône affichée lorsque l'adresse IP est récupérée avec succès",
+      "label": "Icône de succès"
+    },
+    "errorIcon": {
+      "desc": "Icône affichée lorsque la récupération de l'adresse IP échoue",
+      "label": "Icône d'erreur"
+    },
+    "loadingIcon": {
+      "desc": "Icône affichée lors de la récupération de l'adresse IP",
+      "label": "Icône de chargement"
+    },
+    "browseIcons": "Parcourir les icônes",
+    "behavior": {
+      "title": "Comportement"
+    },
+    "refreshInterval": {
+      "desc": "Fréquence de rafraîchissement automatique des informations IP. Mettre à 0 pour désactiver le rafraîchissement automatique.",
+      "label": "Intervalle de rafraîchissement automatique (secondes)",
+      "placeholder": "300"
+    },
+    "commands": {
+      "title": "Commandes"
+    },
+    "ipcCommands": {
+      "title": "Commandes IPC",
+      "refreshIp": "Actualiser l'adresse IP",
+      "togglePanel": "Afficher/Masquer le panneau"
+    }
+  }
+}

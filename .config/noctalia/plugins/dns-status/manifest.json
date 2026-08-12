@@ -1,0 +1,12 @@
+{
+  "id": "dns-status",
+  "name": "DNS",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "Resolvers, MagicDNS vs split-DNS, query latency.",
+  "tags": ["Desktop", "Network"],
+  "entryPoints": { "desktopWidget": "DesktopWidget.qml" },
+  "metadata": { "defaultSettings": { "showBackground": false, "roundedCorners": true } }
+}

@@ -1,0 +1,10 @@
+{
+  "aqiScale": "us",
+  "dataSource": "open-meteo",
+  "aqicnToken": "",
+  "useNoctaliaLocation": true,
+  "customLatitude": "",
+  "customLongitude": "",
+  "refreshInterval": 30,
+  "boldText": true
+}

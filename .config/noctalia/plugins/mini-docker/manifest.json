@@ -1,0 +1,33 @@
+{
+  "id": "mini-docker",
+  "name": "Mini Docker",
+  "version": "2.2.0",
+  "minNoctaliaVersion": "3.6.0",
+  "author": "MannuVilasara",
+  "license": "MIT",
+  "repository": "https://github.com/noctalia-dev/noctalia-plugins",
+  "description": "Manage Docker containers, images, volumes & networks",
+  "tags": [
+    "Bar",
+    "Panel",
+    "Development"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml",
+    "panel": "Panel.qml",
+    "settings": "Settings.qml",
+    "desktopWidget": "DesktopWidget.qml"
+  },
+  "dependencies": {
+    "plugins": []
+  },
+  "metadata": {
+    "defaultSettings": {
+      "refreshInterval": 5000,
+      "iconColor": "none",
+      "statusState": "all",
+      "activeColor": "success",
+      "inactiveColor": "error"
+    }
+  }
+}

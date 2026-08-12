@@ -1,0 +1,41 @@
+{
+  "id": "twitter-feeds",
+  "name": "Twitter",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "X/Twitter timelines for handles you add. Uses bird + browser cookies.",
+  "tags": ["Desktop", "News", "Social"],
+  "entryPoints": {
+    "desktopWidget": "DesktopWidget.qml",
+    "desktopWidgetSettings": "DesktopWidgetSettings.qml",
+    "settings": "Settings.qml"
+  },
+  "metadata": {
+    "defaultSettings": {
+      "showBackground": false,
+      "roundedCorners": true,
+      "maxItems": 20,
+      "previewItems": 5,
+      "refreshSeconds": 300,
+      "accounts": [
+        {
+          "name": "Karpathy",
+          "handle": "karpathy",
+          "enabled": true
+        },
+        {
+          "name": "OpenAI",
+          "handle": "OpenAI",
+          "enabled": true
+        },
+        {
+          "name": "HuggingFace",
+          "handle": "huggingface",
+          "enabled": false
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "rss-feeds",
+  "name": "RSS",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "Desktop RSS/Atom headlines. Add feeds in widget settings.",
+  "tags": ["Desktop", "News"],
+  "entryPoints": {
+    "desktopWidget": "DesktopWidget.qml",
+    "desktopWidgetSettings": "DesktopWidgetSettings.qml",
+    "settings": "Settings.qml"
+  },
+  "metadata": {
+    "defaultSettings": {
+      "showBackground": false,
+      "roundedCorners": true,
+      "maxItems": 20,
+      "previewItems": 5,
+      "refreshSeconds": 300,
+      "feeds": [
+        {
+          "name": "HN",
+          "url": "https://hnrss.org/frontpage",
+          "enabled": true
+        },
+        {
+          "name": "Arch",
+          "url": "https://archlinux.org/feeds/news/",
+          "enabled": true
+        },
+        {
+          "name": "LWN",
+          "url": "https://lwn.net/headlines/rss",
+          "enabled": false
+        }
+      ]
+    }
+  }
+}

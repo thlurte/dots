@@ -1,0 +1,12 @@
+{
+  "id": "socket-map",
+  "name": "Socket Map",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "World map of established TCP remotes by GeoIP.",
+  "tags": ["Desktop", "Network"],
+  "entryPoints": { "desktopWidget": "DesktopWidget.qml" },
+  "metadata": { "defaultSettings": { "showBackground": false, "roundedCorners": true } }
+}

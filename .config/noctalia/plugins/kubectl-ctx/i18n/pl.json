@@ -1,0 +1,77 @@
+{
+  "widget": {
+    "tooltip": "Kubernetes Context"
+  },
+  "menu": {
+    "settings": "Ustawienia widgetu"
+  },
+  "panel": {
+    "title": "Kubernetes",
+    "refresh": "Odśwież",
+    "close": "Zamknij",
+    "context": "Kontekst",
+    "namespace": "Namespace",
+    "noContexts": "Brak kontekstów",
+    "noNamespaces": "Brak namespaców",
+    "noResources": "Brak zasobów",
+    "loading": "Ładowanie...",
+    "error": "Błąd pobierania danych",
+    "nsSearch": "Szukaj namespace...",
+    "tabs": {
+      "pods": "Pody",
+      "deployments": "Deploymenty",
+      "statefulsets": "StatefulSety",
+      "daemonsets": "DaemonSety",
+      "services": "Serwisy",
+      "ingresses": "Ingressy",
+      "configmaps": "ConfigMapy",
+      "secrets": "Sekrety"
+    }
+  },
+  "actions": {
+    "copyName": "Kopiuj nazwę",
+    "describe": "Opisz",
+    "logs": "Pokaż logi",
+    "delete": "Usuń",
+    "restart": "Restartuj",
+    "copied": "Skopiowano!"
+  },
+  "delete": {
+    "title": "Usuń zasób",
+    "confirm": "Czy na pewno chcesz usunąć {resource}?",
+    "yes": "Usuń",
+    "cancel": "Anuluj"
+  },
+  "settings": {
+    "kubeconfigPath": {
+      "label": "Ścieżka do kubeconfig",
+      "desc": "Ścieżka do pliku kubeconfig. Zostaw puste aby użyć domyślnej (~/.kube/config).",
+      "placeholder": "~/.kube/config"
+    },
+    "pollInterval": {
+      "label": "Interwał pollingu",
+      "desc": "Jak często odświeżać dane z klastra (w sekundach)."
+    },
+    "showErrorBadge": {
+      "label": "Pokaż badge błędu",
+      "desc": "Pokaż badge na widgecie gdy pod jest w stanie Error lub CrashLoopBackOff."
+    },
+    "terminal": {
+      "label": "Emulator terminala",
+      "desc": "Emulator terminala dla kubectl describe/logs. Zostaw puste aby użyć $TERMINAL.",
+      "placeholder": "$TERMINAL"
+    },
+    "iconColor": {
+      "label": "Kolor ikony",
+      "desc": "Kolor ikony widgetu na barze."
+    },
+    "panelWidth": {
+      "label": "Szerokość panelu",
+      "desc": "Szerokość panelu w pikselach."
+    },
+    "panelHeight": {
+      "label": "Wysokość panelu",
+      "desc": "Wysokość panelu w pikselach."
+    }
+  }
+}

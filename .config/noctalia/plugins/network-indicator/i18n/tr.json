@@ -1,0 +1,101 @@
+{
+  "actions": {
+    "widget-settings": "Widget Ayarları",
+    "toggle-panel": "Monitörü Aç/Kapat"
+  },
+  "panel": {
+    "title": "Ağ Etkinliği",
+    "close": "Kapat",
+    "download": "İndirme",
+    "upload": "Yükleme"
+  },
+  "settings": {
+    "layout": {
+      "label": "Düzen",
+      "desc": "Hücreleri bir satırda (yatay) veya 2×2 ızgarada (dikey) düzenle.",
+      "horizontal": "Yatay",
+      "vertical": "Dikey"
+    },
+    "slots": {
+      "label": "Hücre Ataması",
+      "desc": "Her hücrenin ne göstereceğini seç. Yinelenenlere izin verilmez. Örn. yalnızca simgeleri göstermek için boş hücreler kullan."
+    },
+    "slot": {
+      "txIcon": "TX Simgesi",
+      "rxIcon": "RX Simgesi",
+      "txSpeed": "TX Hızı",
+      "rxSpeed": "RX Hızı",
+      "none": "Boş"
+    },
+    "iconType": {
+      "desc": "TX/RX göstergeleri için kullanılan simge stilini seçin.",
+      "label": "Simge Türü"
+    },
+    "byteThresholdActive": {
+      "desc": "Bu değerin altındaki trafik (B/s) etkin değil olarak gösterilir.",
+      "label": "Etkinlik Eşiği"
+    },
+    "fontSizeModifier": {
+      "desc": "Metin boyutunu varsayılana göre ölçekle.",
+      "label": "Yazı Boyutu"
+    },
+    "iconSizeModifier": {
+      "desc": "Simge boyutunu varsayılan değere göre ölçekle.",
+      "label": "Simge Boyutu"
+    },
+    "useCustomFont": {
+      "desc": "Hız değerleri için varsayılan yazı tipini geçersiz kıl.",
+      "label": "Özel Yazı Tipi"
+    },
+    "customFontFamily": {
+      "desc": "Hız değerleri için bir yazı tipi seçin.",
+      "label": "Yazı Tipi",
+      "placeholder": "Yazı tipi seçin",
+      "searchPlaceholder": "Yazı tipleri ara…"
+    },
+    "customFontBold": {
+      "desc": "Hız değerlerini kalın olarak oluştur.",
+      "label": "Kalın"
+    },
+    "customFontItalic": {
+      "desc": "Hız değerlerini italik olarak oluştur.",
+      "label": "İtalik"
+    },
+    "useCustomColors": {
+      "desc": "Tema varsayılanları yerine özel renkleri etkinleştir.",
+      "label": "Özel Renkler"
+    },
+    "colorTx": {
+      "desc": "Eşiğin üzerindeyken yükleme (TX) simge rengi.",
+      "label": "TX Aktif"
+    },
+    "colorRx": {
+      "desc": "Eşiğin üzerindeyken indirme (RX) simge rengi.",
+      "label": "RX Aktif"
+    },
+    "colorSilent": {
+      "desc": "Trafiğin eşiğin altında olduğu durumlarda simge rengi.",
+      "label": "Etkin Değil"
+    },
+    "colorText": {
+      "desc": "Hız değerleri için metin rengi.",
+      "label": "Metin"
+    },
+    "paddingLeft": {
+      "label": "Sol Dolgu",
+      "desc": "İçeriğin sol tarafındaki dolgu."
+    },
+    "paddingRight": {
+      "label": "Sağ Dolgu",
+      "desc": "İçeriğin sağ tarafındaki dolgu."
+    },
+    "columnSpacing": {
+      "label": "Sütun Aralığı",
+      "desc": "Izgara düzeninde sütunlar arası boşluk."
+    },
+    "rowSpacing": {
+      "label": "Satır Aralığı",
+      "desc": "Izgara düzeninde satırlar arası boşluk (yatay düzende etkisizdir)."
+    }
+  }
+}

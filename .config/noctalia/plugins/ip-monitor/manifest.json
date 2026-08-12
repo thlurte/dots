@@ -1,0 +1,31 @@
+{
+  "id": "ip-monitor",
+  "name": "IP Monitor",
+  "version": "0.1.2",
+  "minNoctaliaVersion": "4.4.3",
+  "author": "deepalpha",
+  "license": "MIT",
+  "repository": "https://github.com/noctalia-dev/noctalia-plugins",
+  "description": "Plugin showing current external IP",
+  "tags": [
+    "Development"
+  ],
+  "entryPoints": {
+    "main": "Main.qml",
+    "barWidget": "BarWidget.qml",
+    "panel": "Panel.qml",
+    "settings": "Settings.qml"
+  },
+  "dependencies": {
+    "plugins": []
+  },
+  "metadata": {
+    "defaultSettings": {
+      "iconColor": "primary",
+      "refreshInterval": 300,
+      "successIcon": "network",
+      "errorIcon": "alert-circle",
+      "loadingIcon": "loader"
+    }
+  }
+}

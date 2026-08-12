@@ -1,0 +1,21 @@
+{
+  "hosts": [
+    {
+      "name": "Cloudflare DNS",
+      "address": "1.1.1.1"
+    },
+    {
+      "name": "Google DNS",
+      "address": "8.8.8.8"
+    }
+  ],
+  "intervalSeconds": 5,
+  "thresholdGood": 20,
+  "thresholdWarning": 70,
+  "showHostName": false,
+  "barHost": "Google DNS",
+  "colorGood": "#8bc34a",
+  "colorWarning": "#b8860b",
+  "colorCritical": "#f44336",
+  "animations": true
+}

@@ -1,0 +1,28 @@
+{
+  "id": "port-monitor",
+  "name": "Port Monitor",
+  "version": "1.0.1",
+  "minNoctaliaVersion": "3.6.0",
+  "author": "adriamartin91",
+  "license": "MIT",
+  "repository": "https://github.com/noctalia-dev/noctalia-plugins",
+  "description": "Monitor listening ports and their processes. Shows TCP/UDP ports with process info and kill functionality.",
+  "tags": ["Bar", "Panel", "Development", "System", "Utility"],
+  "entryPoints": {
+    "main": "Main.qml",
+    "barWidget": "BarWidget.qml",
+    "panel": "Panel.qml",
+    "settings": "Settings.qml",
+    "desktopWidget": "DesktopWidget.qml"
+  },
+  "dependencies": {
+    "plugins": []
+  },
+  "metadata": {
+    "defaultSettings": {
+      "refreshInterval": 5,
+      "hideSystemPorts": false,
+      "hideWhenEmpty": false
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "widget": {
+    "tooltip": "Kubernetes Context"
+  },
+  "menu": {
+    "settings": "Widget settings"
+  },
+  "panel": {
+    "title": "Kubernetes",
+    "refresh": "Refresh",
+    "close": "Close",
+    "context": "Context",
+    "namespace": "Namespace",
+    "noContexts": "No contexts found",
+    "noNamespaces": "No namespaces found",
+    "noResources": "No resources found",
+    "loading": "Loading...",
+    "error": "Error fetching data",
+    "nsSearch": "Search namespaces...",
+    "tabs": {
+      "pods": "Pods",
+      "deployments": "Deployments",
+      "statefulsets": "StatefulSets",
+      "daemonsets": "DaemonSets",
+      "services": "Services",
+      "ingresses": "Ingresses",
+      "configmaps": "ConfigMaps",
+      "secrets": "Secrets"
+    }
+  },
+  "actions": {
+    "copyName": "Copy name",
+    "describe": "Describe",
+    "logs": "View logs",
+    "delete": "Delete",
+    "restart": "Restart",
+    "copied": "Copied!"
+  },
+  "delete": {
+    "title": "Delete resource",
+    "confirm": "Are you sure you want to delete {resource}?",
+    "yes": "Delete",
+    "cancel": "Cancel"
+  },
+  "settings": {
+    "kubeconfigPath": {
+      "label": "Kubeconfig path",
+      "desc": "Path to kubeconfig file. Leave empty to use default (~/.kube/config).",
+      "placeholder": "~/.kube/config"
+    },
+    "pollInterval": {
+      "label": "Poll interval",
+      "desc": "How often to refresh data from the cluster (in seconds)."
+    },
+    "showErrorBadge": {
+      "label": "Show error badge",
+      "desc": "Show a badge on the bar widget when a pod is in Error or CrashLoopBackOff state."
+    },
+    "terminal": {
+      "label": "Terminal emulator",
+      "desc": "Terminal emulator for kubectl describe/logs. Leave empty to use $TERMINAL.",
+      "placeholder": "$TERMINAL"
+    },
+    "iconColor": {
+      "label": "Icon color",
+      "desc": "Color of the bar widget icon."
+    },
+    "panelWidth": {
+      "label": "Panel width",
+      "desc": "Width of the panel in pixels."
+    },
+    "panelHeight": {
+      "label": "Panel height",
+      "desc": "Height of the panel in pixels."
+    }
+  }
+}

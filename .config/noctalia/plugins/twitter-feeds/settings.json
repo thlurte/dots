@@ -1,0 +1,49 @@
+{
+  "showBackground": false,
+  "roundedCorners": true,
+  "maxItems": 20,
+  "previewItems": 5,
+  "refreshSeconds": 600,
+  "accounts": [
+    {
+      "name": "Karpathy",
+      "handle": "karpathy",
+      "enabled": false
+    },
+    {
+      "name": "Summit",
+      "handle": "_reachsumit",
+      "enabled": true
+    },
+    {
+      "name": "Gordic Aleksa",
+      "handle": "gordic_aleksa",
+      "enabled": true
+    },
+    {
+      "name": "Lilian Weng",
+      "handle": "lilianweng",
+      "enabled": true
+    },
+    {
+      "name": "Dair.ai",
+      "handle": "dair_ai",
+      "enabled": true
+    },
+    {
+      "name": "Rohan Paul",
+      "handle": "rohanpaul_ai",
+      "enabled": true
+    },
+    {
+      "name": "Daily Papers",
+      "handle": "HuggingPapers",
+      "enabled": true
+    },
+    {
+      "name": "Jiqizhixin",
+      "handle": "jiqizhixin",
+      "enabled": true
+    }
+  ]
+}

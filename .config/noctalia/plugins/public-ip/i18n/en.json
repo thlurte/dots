@@ -1,0 +1,9 @@
+{
+  "widget": {
+    "title": "Public IP",
+    "loading": "Looking up…",
+    "error": "Unavailable",
+    "copied": "Copied %1",
+    "refresh": "Refresh"
+  }
+}

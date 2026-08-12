@@ -1,0 +1,59 @@
+{
+    "settings": {
+        "capture": {
+            "label": "Capture activée",
+            "description": "Démarrer ou arrêter la capture d'événements clavier"
+        },
+        "ipc": {
+            "title": "Commandes IPC",
+            "toggleCommand": "Basculer la capture : qs -c noctalia-shell ipc call plugin:show-keys toggle"
+        },
+        "security": {
+            "title": "Avertissement de sécurité",
+            "message": "Show Keys lit les événements clavier bruts depuis /dev/input/event*. Les compositeurs comme niri n'exposent pas d'API native sécurisée pour ce cas d'usage, ce plugin doit donc s'appuyer sur un accès direct au périphérique d'entrée. Autoriser votre utilisateur à accéder au groupe 'input' affaiblit l'isolation des entrées de Wayland et peut permettre à d'autres processus s'exécutant sous votre utilisateur d'observer vos frappes clavier.",
+            "disclaimer": "Tant que niri ou d'autres compositeurs Wayland ne fournissent pas d'API native appropriée, ce plugin fonctionne avec ce compromis de sécurité. Si vous l'activez, vous en acceptez et assumez les risques associés."
+        },
+        "device": {
+            "label": "Chemin du périphérique (IMPORTANT)",
+            "description": "Le chemin d'événement de votre clavier, REDÉMARREZ noctalia-shell pour appliquer les changements.",
+            "placeholder": "/dev/input/event3"
+        },
+        "guide": {
+            "title": "Guide de configuration",
+            "steps": "• NOUVEAUX utilisateurs : LANCEZ 'sudo evtest' pour trouver le chemin de votre clavier.\n• Pour une capture sans root, AJOUTEZ votre utilisateur au groupe 'input' avec 'sudo usermod -aG input $USER', puis REDÉMARREZ votre session.\n• ATTENTION : c'est un compromis de commodité qui peut permettre à d'autres processus de lire les entrées clavier brutes.\n• Si vous n'acceptez pas ce risque, n'activez pas ce plugin tant qu'un support natif du compositeur n'existe pas."
+        },
+        "position": {
+            "label": "Position de l'OSD",
+            "description": "Lieu d'apparition de l'overlay à l'écran",
+            "bottom": "Bas",
+            "top": "Haut"
+        },
+        "margin": {
+            "label": "Marge du bord",
+            "description": "Distance du bord de l'écran : {value} px"
+        },
+        "delay": {
+            "label": "Délai avant masquage",
+            "description": "Délai en secondes avant que l'OSD disparaisse : {value} s"
+        },
+        "pillColor": {
+            "label": "Couleur du texte",
+            "description": "Couleur du texte des touches"
+        },
+        "pillBg": {
+            "label": "Couleur d'arrière-plan",
+            "description": "Couleur de fond de chaque touche"
+        },
+        "useCustomColors": {
+            "label": "Couleurs personnalisées",
+            "description": "Passer outre les couleurs de votre thème Noctalia"
+        },
+        "monitors": {
+            "label": "Écrans actifs",
+            "description": "Sélectionnez les écrans qui afficheront l'overlay"
+        },
+        "preview": {
+            "label": "Aperçu"
+        }
+    }
+}

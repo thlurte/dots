@@ -1,0 +1,12 @@
+{
+  "id": "oom-kills",
+  "name": "OOM",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "Out-of-memory kills this boot.",
+  "tags": ["Desktop", "System"],
+  "entryPoints": { "desktopWidget": "DesktopWidget.qml" },
+  "metadata": { "defaultSettings": { "showBackground": false, "roundedCorners": true } }
+}

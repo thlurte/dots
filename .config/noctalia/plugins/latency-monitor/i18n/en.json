@@ -1,0 +1,71 @@
+{
+  "menu": {
+    "openPanel": "Latency Monitor",
+    "settings": "Widget Settings"
+  },
+  "widget": {
+    "timedOut": "Timed out",
+    "tooltip": {
+      "noData": "No ping data yet"
+    }
+  },
+  "panel": {
+    "title": "Latency Monitor",
+    "close": "Close",
+    "window": "Window",
+    "timings": {
+      "10m": "10 min",
+      "30m": "30 min",
+      "1h": "1 hour",
+      "last": "last"
+    }
+  },
+  "settings": {
+    "hosts": {
+      "header": "Hosts",
+      "desc": "Hosts to ping. At least one required.",
+      "name": "Name",
+      "address": "Address",
+      "namePlaceholder": "e.g. Gateway",
+      "addressPlaceholder": "e.g. 192.168.1.1",
+      "add": "Add host",
+      "remove": "Remove"
+    },
+    "interval": {
+      "header": "Polling",
+      "desc": "How often each host is pinged.",
+      "label": "Interval"
+    },
+    "thresholds": {
+      "header": "Thresholds",
+      "desc": "Latency ranges that determine the status colour.",
+      "good": "Good below",
+      "warning": "Warning below"
+    },
+    "display": {
+      "header": "Display"
+    },
+    "showHostName": {
+      "label": "Show host name in bar",
+      "desc": "Prefix the latency value with the worst host's name."
+    },
+    "animations": {
+      "label": "Show pulse animations",
+      "desc": "Pulsate on tick, faster when warning or critical"
+    },
+    "barHost": {
+      "label": "Bar host",
+      "desc": "Which host's latency is shown in the bar.",
+      "worst": "Worst (auto)"
+    },
+    "colorGood": {
+      "label": "Good colour"
+    },
+    "colorWarning": {
+      "label": "Warning colour"
+    },
+    "colorCritical": {
+      "label": "Critical colour"
+    }
+  }
+}

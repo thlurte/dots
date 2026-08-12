@@ -1,0 +1,17 @@
+{
+  "refreshInterval": 5000,
+  "compactMode": false,
+  "showIpAddress": true,
+  "showPeerCount": true,
+  "hideDisconnected": false,
+  "hideMullvadExitNodes": false,
+  "showSearchBar": true,
+  "terminalCommand": "alacritty",
+  "sshUsername": "",
+  "pingCount": 5,
+  "defaultPeerAction": "copy-ip",
+  "taildropEnabled": true,
+  "taildropDownloadDir": "~/Downloads",
+  "taildropReceiveMode": "operator",
+  "loginServer": ""
+}
