@@ -17,7 +17,7 @@
 
 Personal desktop config for a dual-monitor CachyOS / Arch laptop. Window management is **Hyprland**; the bar, launcher, notifications, and floating desktop widgets are **Noctalia Shell** on Quickshell (`qs -c noctalia-shell`).
 
-Configs under `~/.config/<app>` are symlinked into this repo so the machine and git stay in sync.
+Configs are [GNU Stow](https://www.gnu.org/software/stow/) packages. `./stow.sh` links them into `$HOME` (nvim, hypr, fish, …). It does not install software.
 
 ---
 
@@ -41,13 +41,13 @@ Configs under `~/.config/<app>` are symlinked into this repo so the machine and 
 | Launcher | Noctalia IPC (`Super+Space`) / Fuzzel config kept |
 | Screenshots | Flameshot + grim/slurp OCR bind |
 
-**Not used anymore:** i3, niri, Hyprpanel (legacy folder kept under `.config/hyprpanel`).
+**Not used anymore:** i3, niri, Hyprpanel (legacy package `hyprpanel/`; `./stow.sh -a` to link it).
 
 ---
 
 ## Monitors
 
-Configured in `.config/hypr/hyprland.conf`:
+Configured in `hypr/.config/hypr/hyprland.conf` (linked to `~/.config/hypr` by Stow):
 
 | Output | Role | Mode | Position |
 |:---:|:---:|:---:|:---:|
@@ -64,43 +64,47 @@ Desktop widgets live mostly on **eDP-1**. HDMI holds decorative **custom sticker
 
 ```
 dots/
-├── README.md
-├── assets/
-│   ├── demo-*.png          # README screenshots
-│   └── stickers/           # Noctalia custom-sticker images (HDMI)
-├── .fonts/                 # optional local fonts
-├── .wallpaper/
+├── stow.sh                 # link packages into $HOME (no installs)
+├── nvim/.config/nvim/
+├── hypr/.config/hypr/      # Hyprland + paper/lock/idle + scripts/shaders
+├── noctalia/.config/noctalia/
+├── kitty/.config/kitty/
+├── alacritty/.config/alacritty/
+├── fish/.config/fish/
+├── fuzzel/.config/fuzzel/
+├── matugen/.config/matugen/
+├── btop/.config/btop/
+├── micro/.config/micro/
+├── hyprpanel/.config/hyprpanel/   # unused legacy bar
+├── fonts/.fonts/
+├── wallpaper/.wallpaper/
 │   ├── edp/b-660.jpg       # hyprpaper → eDP-1
 │   └── hdmi/b-1110.jpg     # hyprpaper → HDMI-A-1
-└── .config/                # ← symlinked from ~/.config/
-    ├── hypr/               # Hyprland + paper/lock/idle + scripts/shaders
-    ├── noctalia/           # Shell settings + all desktop widget plugins
-    ├── kitty/
-    ├── alacritty/
-    ├── fish/
-    ├── nvim/
-    ├── fuzzel/
-    ├── matugen/
-    ├── btop/
-    ├── micro/
-    └── hyprpanel/          # unused legacy bar
+└── assets/
+    ├── demo-*.png
+    └── stickers/           # Noctalia custom-sticker images (HDMI)
 ```
 
-### Symlinks
+### Stow
 
-On this machine:
+Needs only **GNU Stow**. Does not install Hyprland, Neovim, or anything else.
+
+```bash
+./stow.sh            # nvim, hypr, fish, kitty, noctalia, fonts, wallpaper, …
+./stow.sh nvim       # one package
+./stow.sh -R         # restow
+./stow.sh -D nvim    # remove nvim links
+./stow.sh -n         # dry run
+./stow.sh -a         # also link legacy hyprpanel
+```
+
+Stow folds into an existing `~/.config` directory:
 
 ```text
-~/.config/hypr      → ~/personal/dots/.config/hypr
-~/.config/noctalia  → ~/personal/dots/.config/noctalia
-~/.config/kitty     → ~/personal/dots/.config/kitty
-~/.config/alacritty → ~/personal/dots/.config/alacritty
-~/.config/fish      → ~/personal/dots/.config/fish
-~/.config/nvim      → ~/personal/dots/.config/nvim
-~/.config/fuzzel    → ~/personal/dots/.config/fuzzel
-~/.config/matugen   → ~/personal/dots/.config/matugen
-~/.config/btop      → ~/personal/dots/.config/btop
-~/.config/micro     → ~/personal/dots/.config/micro
+~/.config/nvim      → …/dots/nvim/.config/nvim
+~/.config/hypr      → …/dots/hypr/.config/hypr
+~/.fonts            → …/dots/fonts/.fonts
+~/.wallpaper        → …/dots/wallpaper/.wallpaper
 ```
 
 ---
@@ -130,7 +134,7 @@ The desktop boots in **grayscale**. Two things make that stick:
 
 To start in color instead: remove the `screen_shader` line and the `touch /tmp/hypr_grayscale_active` exec-once (or invert the script logic).
 
-Extra pieces under `.config/hypr/`:
+Extra pieces under `hypr/.config/hypr/`:
 
 | File / dir | Purpose |
 |:---|:---|
@@ -220,7 +224,7 @@ Package: `ttf-cascadia-code-nerd`. Reload with `Ctrl+Shift+F5` or a new window.
 
 ## Neovim
 
-Kickstart-style config in `.config/nvim/`.
+Kickstart-style config in `nvim/.config/nvim/`.
 
 - Colorscheme: **`tokyonight-night`**
 - Leader: `Space`
@@ -230,7 +234,7 @@ Kickstart-style config in `.config/nvim/`.
 
 ## Keybinds
 
-`$mainMod` = `Super`. Source of truth: `.config/hypr/hyprland.conf`.
+`$mainMod` = `Super`. Source of truth: `hypr/.config/hypr/hyprland.conf`.
 
 ### Apps & system
 
@@ -276,9 +280,9 @@ Volume / mute / mic / brightness / media via `wpctl`, `brightnessctl`, `playerct
 
 ## Install / restore
 
-1. Clone to `~/personal/dots` (or adjust symlink targets).
-2. Symlink the `.config/*` folders you want into `~/.config/`.
-3. Install at least:
+1. Clone to `~/personal/dots`.
+2. Install GNU Stow, then link configs only: `./stow.sh` (no other packages are installed by that script).
+3. Separately, install at least:
    - Hyprland, hyprpaper, hyprlock, hypridle
    - Quickshell + Noctalia Shell
    - Kitty, Fish, Neovim
@@ -305,7 +309,7 @@ Volume / mute / mic / brightness / media via `wpctl`, `brightnessctl`, `playerct
 
 ## Credits
 
-- [Hyprland](https://hyprland.org/) / hyprpaper / hyprlock / hypridle
+- [GNU Stow](https://www.gnu.org/software/stow/) for linking packages into `$HOME`
 - [Noctalia Shell](https://github.com/noctalia-dev/noctalia-shell) + community plugins
 - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
 - Kickstart.nvim lineage for the Neovim base

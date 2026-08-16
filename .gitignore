@@ -3,10 +3,10 @@
 **/*~
 
 # Font cache noise
-.fonts/.uuid
+**/.uuid
 
 # Unused Noctalia v5 leftover
-.config/noctalia/luau-plugins/
+noctalia/.config/noctalia/luau-plugins/
 
 # OS junk
 .DS_Store
@@ -15,19 +15,18 @@ Thumbs.db
 *.swo
 
 # Secrets / local identity
-.config/noctalia/plugins/habitica/settings.json
-.config/noctalia/plugins/**/secrets.json
-.config/noctalia/plugins/**/*token*
-.fonts/.uuid
+noctalia/.config/noctalia/plugins/habitica/settings.json
+noctalia/.config/noctalia/plugins/**/secrets.json
+noctalia/.config/noctalia/plugins/**/*token*
 
 # Large / local-only plugin noise (optional clipboard DB etc.)
-.config/noctalia/plugins/clipper/**/db/
-.config/noctalia/plugins/clipper/**/*.db
-.config/noctalia/plugins/clipper/**/history*
+noctalia/.config/noctalia/plugins/clipper/**/db/
+noctalia/.config/noctalia/plugins/clipper/**/*.db
+noctalia/.config/noctalia/plugins/clipper/**/history*
 
 # Local plugin venvs / bytecode / backups
-.config/noctalia/plugins/**/.venv/
-.config/noctalia/plugins/**/models/*.onnx
+noctalia/.config/noctalia/plugins/**/.venv/
+noctalia/.config/noctalia/plugins/**/models/*.onnx
 **/__pycache__/
 *.pyc
-.config/kitty/*.bak
+kitty/.config/kitty/*.bak
