@@ -1,0 +1,26 @@
+{
+  "id": "adsb-board",
+  "name": "ADS-B Board",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "Aircraft near you via OpenSky (or local dump1090).",
+  "tags": ["Desktop", "Aviation"],
+  "entryPoints": {
+    "desktopWidget": "DesktopWidget.qml"
+  },
+  "metadata": {
+    "defaultSettings": {
+      "showBackground": false,
+      "roundedCorners": true,
+      "mapWidth": 640,
+      "homeLat": 7.73,
+      "homeLon": 81.70,
+      "radiusKm": 800,
+      "maxItems": 60,
+      "dump1090Url": "",
+      "refreshSeconds": 15
+    }
+  }
+}

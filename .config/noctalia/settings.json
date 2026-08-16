@@ -45,7 +45,7 @@
         "capsuleColorKey": "primary",
         "capsuleOpacity": 0,
         "contentPadding": 2,
-        "density": "comfortable",
+        "density": "default",
         "displayMode": "always_visible",
         "enableExclusionZoneInset": true,
         "fontScale": 1,
@@ -53,7 +53,7 @@
         "frameThickness": 8,
         "hideOnOverview": false,
         "marginHorizontal": 500,
-        "marginVertical": 11,
+        "marginVertical": 10,
         "middleClickAction": "none",
         "middleClickCommand": "",
         "middleClickFollowMouse": false,
@@ -328,7 +328,7 @@
     },
     "desktopWidgets": {
         "enabled": true,
-        "gridSnap": false,
+        "gridSnap": true,
         "gridSnapScale": false,
         "monitorWidgets": [
             {
@@ -376,7 +376,7 @@
                         "roundedCorners": true,
                         "scale": 1,
                         "showBackground": false,
-                        "x": 460,
+                        "x": 480,
                         "y": 240
                     },
                     {
@@ -385,7 +385,7 @@
                         "roundedCorners": true,
                         "scale": 1,
                         "showBackground": false,
-                        "x": 600,
+                        "x": 620,
                         "y": 220
                     },
                     {
@@ -484,8 +484,8 @@
                         "roundedCorners": true,
                         "scale": 1,
                         "showBackground": false,
-                        "x": 1600,
-                        "y": 680
+                        "x": 1260,
+                        "y": 300
                     },
                     {
                         "defaultSettings": {},
@@ -502,8 +502,8 @@
                         "roundedCorners": true,
                         "scale": 1,
                         "showBackground": false,
-                        "x": 1600,
-                        "y": 540
+                        "x": 1602,
+                        "y": 621
                     },
                     {
                         "defaultSettings": {},
@@ -523,15 +523,15 @@
                         "showBackground": false,
                         "statType": "CPU",
                         "x": 40,
-                        "y": 340
+                        "y": 400
                     },
                     {
                         "defaultSettings": {},
                         "id": "plugin:net-errors",
                         "roundedCorners": true,
-                        "scale": 1,
+                        "scale": 0.9103410698542369,
                         "showBackground": false,
-                        "x": 1212,
+                        "x": 1208,
                         "y": 586
                     },
                     {
@@ -550,7 +550,7 @@
                         "scale": 1,
                         "showBackground": false,
                         "x": 40,
-                        "y": 540
+                        "y": 580
                     },
                     {
                         "defaultSettings": {},
@@ -605,6 +605,15 @@
                         "showBackground": false,
                         "x": 46,
                         "y": 60
+                    },
+                    {
+                        "defaultSettings": {},
+                        "id": "plugin:reddit-feeds",
+                        "roundedCorners": true,
+                        "scale": 1,
+                        "showBackground": false,
+                        "x": 40,
+                        "y": 220
                     }
                 ]
             },
@@ -612,129 +621,30 @@
                 "name": "HDMI-A-1",
                 "widgets": [
                     {
-                        "defaultSettings": {},
-                        "id": "plugin:custom-sticker",
-                        "image": "/home/ahmed/personal/dots/assets/stickers/16084900_proof.png",
-                        "mirror": false,
-                        "opacity": 1,
-                        "roundedCorners": true,
-                        "scale": 1,
-                        "showBackground": false,
-                        "verticalMirror": false,
-                        "x": 1448,
-                        "y": 262
-                    },
-                    {
-                        "defaultSettings": {},
-                        "id": "plugin:custom-sticker",
-                        "image": "/home/ahmed/personal/dots/assets/stickers/proof_(1).png",
-                        "mirror": false,
-                        "opacity": 1,
-                        "roundedCorners": true,
-                        "scale": 1,
-                        "showBackground": false,
-                        "verticalMirror": false,
-                        "x": 459,
-                        "y": 747
-                    },
-                    {
-                        "defaultSettings": {},
-                        "id": "plugin:custom-sticker",
-                        "image": "/home/ahmed/personal/dots/assets/stickers/22364047_proof.png",
-                        "mirror": false,
-                        "opacity": 1,
-                        "roundedCorners": true,
-                        "scale": 1,
-                        "showBackground": false,
-                        "verticalMirror": false,
-                        "x": 1587,
-                        "y": 851
-                    },
-                    {
-                        "defaultSettings": {},
-                        "id": "plugin:custom-sticker",
-                        "image": "/home/ahmed/personal/dots/assets/stickers/18746786_proof.png",
-                        "mirror": false,
-                        "opacity": 1,
-                        "roundedCorners": true,
-                        "scale": 1,
-                        "showBackground": false,
-                        "verticalMirror": false,
-                        "x": 1326,
-                        "y": 558
-                    },
-                    {
-                        "defaultSettings": {},
-                        "id": "plugin:custom-sticker",
-                        "image": "/home/ahmed/personal/dots/assets/stickers/17977197_proof.png",
-                        "mirror": false,
-                        "opacity": 1,
-                        "roundedCorners": true,
-                        "scale": 1,
-                        "showBackground": false,
-                        "verticalMirror": false,
-                        "x": 471,
-                        "y": 255
-                    },
-                    {
-                        "defaultSettings": {},
-                        "id": "plugin:custom-sticker",
-                        "image": "/home/ahmed/personal/dots/assets/stickers/program_layout_in_memory-removebg-preview.png",
-                        "mirror": false,
-                        "opacity": 1,
-                        "roundedCorners": true,
-                        "scale": 2.4830644023433166,
-                        "showBackground": false,
-                        "verticalMirror": false,
-                        "x": 1051,
-                        "y": 686
-                    },
-                    {
-                        "defaultSettings": {},
-                        "id": "plugin:custom-sticker",
-                        "image": "/home/ahmed/personal/dots/assets/stickers/The-Transformer-model-architecture-removebg-preview.png",
-                        "mirror": false,
-                        "opacity": 1,
-                        "roundedCorners": true,
-                        "scale": 2.891676367825855,
-                        "showBackground": false,
-                        "verticalMirror": false,
-                        "x": 963,
-                        "y": 91
-                    },
-                    {
-                        "defaultSettings": {},
-                        "id": "plugin:custom-sticker",
-                        "image": "/home/ahmed/personal/dots/assets/stickers/14122322_proof.png",
-                        "mirror": false,
-                        "opacity": 1,
-                        "roundedCorners": true,
-                        "scale": 1,
-                        "showBackground": false,
-                        "verticalMirror": false,
-                        "x": 841,
-                        "y": 89
-                    },
-                    {
-                        "defaultSettings": {},
-                        "id": "plugin:custom-sticker",
-                        "image": "/home/ahmed/personal/dots/assets/stickers/proof_(5).png",
-                        "mirror": false,
-                        "opacity": 1,
-                        "roundedCorners": true,
-                        "scale": 1,
-                        "showBackground": false,
-                        "verticalMirror": false,
-                        "x": 11,
-                        "y": 926
-                    },
-                    {
                         "id": "Weather",
                         "roundedCorners": true,
                         "scale": 1,
                         "showBackground": true,
-                        "x": 97,
-                        "y": 288
+                        "x": 1640,
+                        "y": 80
+                    },
+                    {
+                        "defaultSettings": {},
+                        "id": "plugin:news-globe",
+                        "roundedCorners": true,
+                        "scale": 1,
+                        "showBackground": false,
+                        "x": 440,
+                        "y": 40
+                    },
+                    {
+                        "defaultSettings": {},
+                        "id": "plugin:solar-system",
+                        "roundedCorners": false,
+                        "scale": 1.3979869495256472,
+                        "showBackground": false,
+                        "x": 80,
+                        "y": 40
                     }
                 ]
             }
@@ -1114,15 +1024,26 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/ahmed/Pictures/Wallpapers",
-        "enableMultiMonitorDirectories": false,
-        "enabled": true,
+        "directory": "/home/ahmed/.wallpaper",
+        "enableMultiMonitorDirectories": true,
+        "enabled": false,
         "favorites": [],
         "fillColor": "#000000",
         "fillMode": "stretch",
         "hideWallpaperFilenames": false,
         "linkLightAndDarkWallpapers": true,
-        "monitorDirectories": [],
+        "monitorDirectories": [
+            {
+                "directory": "/home/ahmed/.wallpaper/hdmi",
+                "name": "HDMI-A-1",
+                "wallpaper": ""
+            },
+            {
+                "directory": "/home/ahmed/.wallpaper/edp",
+                "name": "eDP-1",
+                "wallpaper": ""
+            }
+        ],
         "overviewBlur": 0.4,
         "overviewEnabled": false,
         "overviewTint": 0.6,

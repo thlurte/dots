@@ -1,0 +1,23 @@
+{
+  "id": "iss-track",
+  "name": "ISS Track",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "Live ISS path over Earth with distance and next-pass hint.",
+  "tags": ["Desktop", "Space"],
+  "entryPoints": {
+    "desktopWidget": "DesktopWidget.qml"
+  },
+  "metadata": {
+    "defaultSettings": {
+      "showBackground": false,
+      "roundedCorners": true,
+      "mapWidth": 640,
+      "homeLat": 7.73,
+      "homeLon": 81.70,
+      "refreshSeconds": 20
+    }
+  }
+}

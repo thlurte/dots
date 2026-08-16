@@ -1,0 +1,47 @@
+{
+  "id": "reddit-feeds",
+  "name": "Reddit",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "Subreddit hot posts via Reddit Atom RSS. Add subs in widget settings.",
+  "tags": ["Desktop", "News", "Social"],
+  "entryPoints": {
+    "desktopWidget": "DesktopWidget.qml",
+    "desktopWidgetSettings": "DesktopWidgetSettings.qml",
+    "settings": "Settings.qml"
+  },
+  "metadata": {
+    "defaultSettings": {
+      "showBackground": false,
+      "roundedCorners": true,
+      "maxItems": 20,
+      "previewItems": 5,
+      "refreshSeconds": 600,
+      "sort": "hot",
+      "subreddits": [
+        {
+          "name": "ML",
+          "subreddit": "MachineLearning",
+          "enabled": true
+        },
+        {
+          "name": "DL",
+          "subreddit": "deeplearning",
+          "enabled": true
+        },
+        {
+          "name": "CV",
+          "subreddit": "computervision",
+          "enabled": true
+        },
+        {
+          "name": "LocalLLaMA",
+          "subreddit": "LocalLLaMA",
+          "enabled": true
+        }
+      ]
+    }
+  }
+}

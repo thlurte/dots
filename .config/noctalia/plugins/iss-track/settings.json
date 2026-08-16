@@ -1,0 +1,8 @@
+{
+  "showBackground": true,
+  "roundedCorners": true,
+  "mapWidth": 460,
+  "homeLat": 7.73,
+  "homeLon": 81.7,
+  "refreshSeconds": 20
+}

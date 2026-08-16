@@ -1,0 +1,11 @@
+{
+  "showBackground": true,
+  "roundedCorners": true,
+  "mapWidth": 460,
+  "homeLat": 7.73,
+  "homeLon": 81.7,
+  "radiusKm": 800,
+  "maxItems": 60,
+  "dump1090Url": "",
+  "refreshSeconds": 15
+}

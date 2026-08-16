@@ -1,0 +1,9 @@
+{
+  "showBackground": true,
+  "roundedCorners": true,
+  "mapWidth": 460,
+  "minMag": 2.5,
+  "maxItems": 40,
+  "feed": "2.5_day",
+  "refreshSeconds": 300
+}

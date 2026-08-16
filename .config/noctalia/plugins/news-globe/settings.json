@@ -1,0 +1,130 @@
+{
+  "showBackground": false,
+  "roundedCorners": true,
+  "globeSize": 1020,
+  "spinDegreesPerSec": 1.8,
+  "maxItems": 60,
+  "tickerItems": 0,
+  "refreshSeconds": 480,
+  "feeds": [
+    {
+      "name": "BBC",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+      "enabled": true,
+      "lat": 51.51,
+      "lon": -0.13
+    },
+    {
+      "name": "NYT",
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+      "enabled": true,
+      "lat": 40.71,
+      "lon": -74.01
+    },
+    {
+      "name": "Al Jazeera",
+      "url": "https://www.aljazeera.com/xml/rss/all.xml",
+      "enabled": true,
+      "lat": 25.29,
+      "lon": 51.53
+    },
+    {
+      "name": "Guardian",
+      "url": "https://www.theguardian.com/world/rss",
+      "enabled": true,
+      "lat": 51.49,
+      "lon": -0.1
+    },
+    {
+      "name": "NPR",
+      "url": "https://feeds.npr.org/1004/rss.xml",
+      "enabled": true,
+      "lat": 38.9,
+      "lon": -77.04
+    },
+    {
+      "name": "France24",
+      "url": "https://www.france24.com/en/rss",
+      "enabled": true,
+      "lat": 48.86,
+      "lon": 2.35
+    },
+    {
+      "name": "Sky",
+      "url": "https://feeds.skynews.com/feeds/rss/world.xml",
+      "enabled": true,
+      "lat": 51.51,
+      "lon": -0.13
+    },
+    {
+      "name": "Euronews",
+      "url": "https://www.euronews.com/rss?level=theme&name=news",
+      "enabled": true,
+      "lat": 45.76,
+      "lon": 4.84
+    },
+    {
+      "name": "ABC AU",
+      "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
+      "enabled": true,
+      "lat": -35.28,
+      "lon": 149.13
+    },
+    {
+      "name": "SCMP",
+      "url": "https://www.scmp.com/rss/91/feed",
+      "enabled": true,
+      "lat": 22.32,
+      "lon": 114.17
+    },
+    {
+      "name": "NDTV",
+      "url": "https://feeds.feedburner.com/ndtvnews-world-news",
+      "enabled": true,
+      "lat": 28.61,
+      "lon": 77.21
+    },
+    {
+      "name": "Slashdot",
+      "url": "https://rss.slashdot.org/Slashdot/slashdotMain",
+      "enabled": true,
+      "alwaysPin": true,
+      "lat": 37.77,
+      "lon": -122.42
+    },
+    {
+      "name": "Slashdot Science",
+      "url": "https://rss.slashdot.org/Slashdot/slashdotScience",
+      "enabled": true,
+      "alwaysPin": true,
+      "lat": 37.41,
+      "lon": -122.08
+    },
+    {
+      "name": "Slashdot Tech",
+      "url": "https://rss.slashdot.org/Slashdot/slashdotIt",
+      "enabled": true,
+      "alwaysPin": true,
+      "lat": 37.39,
+      "lon": -122.08
+    },
+    {
+      "name": "SoylentNews",
+      "url": "https://soylentnews.org/index.rss",
+      "enabled": true,
+      "alwaysPin": true,
+      "lat": 37.8,
+      "lon": -122.27
+    }
+  ],
+  "homeLat": 7.73,
+  "homeLon": 81.7,
+  "showNews": true,
+  "showIss": true,
+  "showQuakes": false,
+  "showAdsb": false,
+  "showWind": false,
+  "showRain": false,
+  "showOcean": false,
+  "adsbRadiusKm": 800
+}

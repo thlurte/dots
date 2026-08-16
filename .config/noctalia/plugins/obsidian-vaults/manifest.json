@@ -1,0 +1,24 @@
+{
+  "id": "obsidian-vaults",
+  "name": "Obsidian Vaults",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "List Obsidian vaults as a desktop card. Click to open.",
+  "tags": ["Desktop", "Productivity"],
+  "entryPoints": {
+    "desktopWidget": "DesktopWidget.qml",
+    "desktopWidgetSettings": "DesktopWidgetSettings.qml",
+    "settings": "Settings.qml"
+  },
+  "metadata": {
+    "defaultSettings": {
+      "showBackground": false,
+      "roundedCorners": true,
+      "obsidianConfigPath": "~/.config/obsidian/obsidian.json",
+      "showPath": true,
+      "maxVaults": 12
+    }
+  }
+}

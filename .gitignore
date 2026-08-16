@@ -24,3 +24,10 @@ Thumbs.db
 .config/noctalia/plugins/clipper/**/db/
 .config/noctalia/plugins/clipper/**/*.db
 .config/noctalia/plugins/clipper/**/history*
+
+# Local plugin venvs / bytecode / backups
+.config/noctalia/plugins/**/.venv/
+.config/noctalia/plugins/**/models/*.onnx
+**/__pycache__/
+*.pyc
+.config/kitty/*.bak

@@ -1,0 +1,7 @@
+{
+  "showBackground": false,
+  "roundedCorners": true,
+  "obsidianConfigPath": "~/.config/obsidian/obsidian.json",
+  "showPath": true,
+  "maxVaults": 12
+}

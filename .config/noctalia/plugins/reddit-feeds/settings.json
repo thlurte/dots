@@ -1,0 +1,30 @@
+{
+  "showBackground": false,
+  "roundedCorners": true,
+  "maxItems": 20,
+  "previewItems": 5,
+  "refreshSeconds": 600,
+  "sort": "hot",
+  "subreddits": [
+    {
+      "name": "ML",
+      "subreddit": "MachineLearning",
+      "enabled": true
+    },
+    {
+      "name": "DL",
+      "subreddit": "deeplearning",
+      "enabled": true
+    },
+    {
+      "name": "CV",
+      "subreddit": "computervision",
+      "enabled": true
+    },
+    {
+      "name": "LocalLLaMA",
+      "subreddit": "LocalLLaMA",
+      "enabled": true
+    }
+  ]
+}

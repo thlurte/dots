@@ -1,0 +1,24 @@
+{
+  "id": "quake-map",
+  "name": "Quake Map",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "USGS earthquakes as blooming ripples on a world map.",
+  "tags": ["Desktop", "News"],
+  "entryPoints": {
+    "desktopWidget": "DesktopWidget.qml"
+  },
+  "metadata": {
+    "defaultSettings": {
+      "showBackground": false,
+      "roundedCorners": true,
+      "mapWidth": 640,
+      "minMag": 2.5,
+      "maxItems": 40,
+      "feed": "2.5_day",
+      "refreshSeconds": 300
+    }
+  }
+}

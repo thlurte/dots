@@ -255,6 +255,34 @@
         "twitter-feeds": {
             "enabled": true,
             "sourceUrl": ""
+        },
+        "reddit-feeds": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "obsidian-vaults": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "news-globe": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "quake-map": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "iss-track": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "adsb-board": {
+            "enabled": true,
+            "sourceUrl": ""
+        },
+        "solar-system": {
+            "enabled": true,
+            "sourceUrl": ""
         }
     },
     "version": 2
