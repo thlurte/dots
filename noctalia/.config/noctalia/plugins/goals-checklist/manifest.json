@@ -1,0 +1,12 @@
+{
+  "id": "goals-checklist",
+  "name": "Goals Checklist",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "Daily action items, core deliverables, and runbook quick-launch for Vector Search / AI Systems.",
+  "tags": ["Desktop", "Productivity"],
+  "entryPoints": { "desktopWidget": "DesktopWidget.qml" },
+  "metadata": { "defaultSettings": { "showBackground": false, "roundedCorners": true } }
+}

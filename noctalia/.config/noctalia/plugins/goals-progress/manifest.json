@@ -1,0 +1,12 @@
+{
+  "id": "goals-progress",
+  "name": "Goals Progress",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "ahmed",
+  "license": "MIT",
+  "description": "28-Week Specialization milestones, progress bar, and hard landing countdown.",
+  "tags": ["Desktop", "Productivity"],
+  "entryPoints": { "desktopWidget": "DesktopWidget.qml" },
+  "metadata": { "defaultSettings": { "showBackground": false, "roundedCorners": true } }
+}
