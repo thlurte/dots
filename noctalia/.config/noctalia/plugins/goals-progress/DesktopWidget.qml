@@ -151,7 +151,7 @@ DraggableDesktopWidget {
       RowLayout {
         Layout.fillWidth: true
         NText {
-          text: "Day " + root.currentDay + " / " + root.totalDays + " (" + root.pctProgress + "%)"
+          text: root.isBeforeStart ? "Starts Tomorrow · Day 0 / " + root.totalDays + " (0%)" : ("Day " + root.currentDay + " / " + root.totalDays + " (" + root.pctProgress + "%)")
           color: Color.mOnSurface
           font.weight: Style.fontWeightBold
           pointSize: Style.fontSizeS * widgetScale

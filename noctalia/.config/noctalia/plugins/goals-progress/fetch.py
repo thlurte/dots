@@ -7,7 +7,7 @@ from datetime import datetime, date
 from pathlib import Path
 
 GOALS_DIR = Path(os.path.expanduser("~/personal/goals"))
-START_DATE = date(2026, 9, 1)
+START_DATE = date(2026, 9, 5) # Tomorrow is Day 1!
 
 MONTH_THEMES = [
     "Month 1 (Sep 2026): Scalar & SIMD Distance Kernels",
@@ -94,12 +94,13 @@ def get_progress():
     is_before_start = day_diff < 0
     days_until_start = abs(day_diff) if is_before_start else 0
     
-    current_day = max(1, min(196, day_diff + 1))
-    current_week = min(28, (current_day - 1) // 7 + 1)
-    current_month = min(7, (current_day - 1) // 28 + 1)
+    current_day = 0 if is_before_start else min(196, day_diff + 1)
+    target_day = max(1, min(196, day_diff + 1))
+    current_week = min(28, (target_day - 1) // 7 + 1)
+    current_month = min(7, (target_day - 1) // 28 + 1)
     
     total_days = 196
-    pct_progress = round((current_day / total_days) * 100, 1)
+    pct_progress = 0.0 if is_before_start else round((current_day / total_days) * 100, 1)
     
     # Block info
     if current_week <= 16:

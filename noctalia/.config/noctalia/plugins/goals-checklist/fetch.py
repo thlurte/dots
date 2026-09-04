@@ -7,8 +7,8 @@ from datetime import datetime, date
 from pathlib import Path
 
 GOALS_DIR = Path(os.path.expanduser("~/personal/goals"))
-START_DATE = date(2026, 9, 1)
-END_DATE = date(2027, 3, 14)
+START_DATE = date(2026, 9, 5) # Tomorrow is Day 1!
+END_DATE = date(2027, 3, 19)
 
 def get_current_info():
     today = date.today()
@@ -17,16 +17,17 @@ def get_current_info():
     is_before_start = day_diff < 0
     days_until_start = abs(day_diff) if is_before_start else 0
     
-    # Clamp day for curriculum access (1 to 196)
-    current_day = max(1, min(196, day_diff + 1))
-    current_week = min(28, (current_day - 1) // 7 + 1)
-    current_month = min(7, (current_day - 1) // 28 + 1)
+    current_day = 0 if is_before_start else min(196, day_diff + 1)
+    target_day = max(1, min(196, day_diff + 1))
+    current_week = min(28, (target_day - 1) // 7 + 1)
+    current_month = min(7, (target_day - 1) // 28 + 1)
     
     return {
         "today_iso": today.isoformat(),
         "is_before_start": is_before_start,
         "days_until_start": days_until_start,
         "current_day": current_day,
+        "target_day": target_day,
         "current_week": current_week,
         "current_month": current_month,
     }
@@ -39,7 +40,6 @@ def toggle_task(file_path_str, task_text):
     content = path.read_text(encoding="utf-8")
     clean_search = re.escape(task_text[:30].strip())
     
-    # Matches `* [ ] ...`, `* `[ ]` ...`, `- [ ] ...`
     pattern_unchecked = re.compile(r"(\*\s*[`]?\[)\s*(\][`]?\s*.*?" + clean_search + r")", re.DOTALL)
     pattern_checked = re.compile(r"(\*\s*[`]?\[)[xX](\][`]?\s*.*?" + clean_search + r")", re.DOTALL)
     
@@ -57,17 +57,19 @@ def toggle_task(file_path_str, task_text):
 def parse_today():
     info = get_current_info()
     c_day = info["current_day"]
+    t_day = info["target_day"] # Day to display/preview
     c_week = info["current_week"]
     c_month = info["current_month"]
+    is_before_start = info["is_before_start"]
+    days_until = info["days_until_start"]
     
-    # 0=Mon, 1=Tue, 2=Wed, 3=Thu, 4=Fri, 5=Sat, 6=Sun
-    day_of_week = (c_day - 1) % 7
+    day_of_week = (t_day - 1) % 7
     is_weekend = day_of_week in (5, 6)
     
     month_dir = GOALS_DIR / "curriculum" / "days" / f"month-{c_month:02d}"
     day_file = None
     if month_dir.exists():
-        matches = list(month_dir.glob(f"day-{c_day:03d}-*.md"))
+        matches = list(month_dir.glob(f"day-{t_day:03d}-*.md"))
         if matches:
             day_file = matches[0]
             
@@ -77,9 +79,13 @@ def parse_today():
     week_theme = "Vector Search & AI Systems Specialization"
     tasks = []
     slots = []
-    day_title = f"Day {c_day:03d}"
     
-    # 1. Evening Reading Plan parsing for today
+    if is_before_start:
+        day_title = f"Day 000 · Starts Tomorrow ({days_until}d)"
+    else:
+        day_title = f"Day {c_day:03d}"
+    
+    # 1. Evening Reading Plan parsing
     lit_text = ""
     if reading_file.exists():
         r_content = reading_file.read_text(encoding="utf-8")
@@ -94,7 +100,7 @@ def parse_today():
                 if m_lit:
                     lit_text = m_lit.group(2).strip()
 
-    # 2. Week file parsing (theme, timetable, action items)
+    # 2. Week file parsing
     c1, c2, c3 = "", "", ""
     if week_file.exists():
         w_text = week_file.read_text(encoding="utf-8")
@@ -103,19 +109,20 @@ def parse_today():
         if m_theme:
             week_theme = m_theme.group(1).strip()
             
-        tt_pattern = re.compile(rf"\|\s*\*\*([^*]+)\*\*\s*\|\s*([^|]+)\s*\|\s*\[`Day {c_day:03d}`\]\([^)]+\)\s*\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|")
+        tt_pattern = re.compile(rf"\|\s*\*\*([^*]+)\*\*\s*\|\s*([^|]+)\s*\|\s*\[`Day {t_day:03d}`\]\([^)]+\)\s*\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|")
         m_tt = tt_pattern.search(w_text)
         if m_tt:
             day_name = m_tt.group(1).strip()
             date_str = m_tt.group(2).strip()
-            day_title = f"Day {c_day:03d} · {date_str}"
+            if not is_before_start:
+                day_title = f"Day {c_day:03d} · {date_str}"
             c1 = m_tt.group(3).strip().replace("**", "")
             c2 = m_tt.group(4).strip().replace("**", "")
             c3 = m_tt.group(5).strip().replace("**", "")
             
         # Parse tasks from section ### 🔹 ... Day XXX
         day_pattern = re.compile(
-            rf"###\s*🔹\s*.*?Day\s*{c_day:03d}.*?\n(.*?)(?=\n###|\n---|\Z)",
+            rf"###\s*🔹\s*.*?Day\s*{t_day:03d}.*?\n(.*?)(?=\n###|\n---|\Z)",
             re.DOTALL
         )
         day_match = day_pattern.search(w_text)
@@ -128,7 +135,7 @@ def parse_today():
                 checked = "[x]" in line or "[X]" in line
                 if "Core" in line:
                     t_type = "core"
-                    label = "Core"
+                    label = "Core" if not is_before_start else "Tomorrow"
                 elif "Optional" in line or "Stretch" in line:
                     t_type = "stretch"
                     label = "Stretch"
@@ -183,14 +190,13 @@ def parse_today():
         "week_num": c_week,
         "month_num": c_month,
         "week_theme": week_theme,
-        "is_before_start": info["is_before_start"],
-        "days_until_start": info["days_until_start"],
+        "is_before_start": is_before_start,
+        "days_until_start": days_until,
         "file_path": str(day_file) if day_file else str(week_file),
         "week_file": str(week_file),
         "reading_file": str(reading_file),
         "slots": slots,
         "tasks": tasks,
-        # Backward compatibility fields
         "math_topic": c1[:90],
         "reading_topic": c2[:90],
         "code_topic": c3[:90]
