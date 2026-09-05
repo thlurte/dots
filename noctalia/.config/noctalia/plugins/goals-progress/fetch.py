@@ -20,13 +20,13 @@ MONTH_THEMES = [
 ]
 
 RESEARCH_PAPERS = [
-    {"month": 1, "topic": "Microarchitectural Limits of SIMD Vector Distance Kernels", "due": date(2026, 9, 27)},
-    {"month": 2, "topic": "Anisotropy-Aware Quantization: Hubness, Cones & Loss Functions", "due": date(2026, 10, 25)},
-    {"month": 3, "topic": "Streaming Late Interaction: PLAID vs MUVERA in Dynamic LSM", "due": date(2026, 11, 29)},
-    {"month": 4, "topic": "Billion-Scale Retrieval: In-VRAM GPU IVF vs NVMe DiskANN", "due": date(2026, 12, 27)},
-    {"month": 5, "topic": "Paging vs Quantizing LLM KV Caches at Long Contexts", "due": date(2027, 1, 31)},
-    {"month": 6, "topic": "Mitigating Recall Collapse in Filtered ANN Graphs (ACORN)", "due": date(2027, 2, 28)},
-    {"month": 7, "topic": "Unified IO-Aware GPU Architecture: FA-2, Paged KV & Multi-GPU", "due": date(2027, 3, 12)},
+    {"month": 1, "topic": "GAPQ Milestone 1: Limits & Cone Anisotropy", "due": date(2026, 9, 27)},
+    {"month": 2, "topic": "GAPQ Milestone 2: Polar Quant & Anisotropic Loss", "due": date(2026, 10, 25)},
+    {"month": 3, "topic": "FlashMaxSim Milestone 1: Streaming Late Interaction", "due": date(2026, 11, 22)},
+    {"month": 4, "topic": "FlashMaxSim Milestone 2: GPU IVF vs NVMe DiskANN", "due": date(2026, 12, 20)},
+    {"month": 5, "topic": "FlashMaxSim Milestone 3: Paged KV vs 3-Bit Quant", "due": date(2027, 1, 17)},
+    {"month": 6, "topic": "FlashMaxSim Milestone 4: Filtered Search (ACORN)", "due": date(2027, 2, 14)},
+    {"month": 7, "topic": "FlashMaxSim Milestone 5: In-SRAM Late Interaction", "due": date(2027, 3, 19)},
 ]
 
 LITERATURE_CURRICULUM = [

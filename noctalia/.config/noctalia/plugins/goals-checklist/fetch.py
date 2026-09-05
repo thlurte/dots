@@ -64,7 +64,9 @@ def parse_today():
     days_until = info["days_until_start"]
     
     day_of_week = (t_day - 1) % 7
-    is_weekend = day_of_week in (5, 6)
+    # Since Day 1 (2026-09-05) is Saturday:
+    # 0 = Saturday, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday
+    is_weekend = day_of_week in (0, 1)
     
     month_dir = GOALS_DIR / "curriculum" / "days" / f"month-{c_month:02d}"
     day_file = None
@@ -162,7 +164,7 @@ def parse_today():
             {"time": "18:30", "icon": "book", "label": "Literature", "desc": lit_text or "Evening Reading Sanctuary"},
             {"time": "20:30", "icon": "cpu", "label": "secan", "desc": c3 or "Night Hands-On C++/CUDA"}
         ]
-    elif day_of_week == 5: # Saturday
+    elif day_of_week == 0: # Saturday
         slots = [
             {"time": "09:00", "icon": "divide", "label": "Math 1", "desc": c1 or "Pure Math Block 1: Theory & Derivations"},
             {"time": "15:00", "icon": "book", "label": "Reading", "desc": lit_text or "Weekend Reading Immersion"},
