@@ -167,14 +167,17 @@ def parse_today():
     elif day_of_week == 0: # Saturday
         slots = [
             {"time": "09:00", "icon": "divide", "label": "Math 1", "desc": c1 or "Pure Math Block 1: Theory & Derivations"},
-            {"time": "15:00", "icon": "book", "label": "Reading", "desc": lit_text or "Weekend Reading Immersion"},
-            {"time": "17:00", "icon": "coffee", "label": "Rest", "desc": "100% Free / Recovery Buffer"}
+            {"time": "15:00", "icon": "book", "label": "Sanctuary", "desc": lit_text or "Weekend Literature Sanctuary"},
+            {"time": "18:00", "icon": "layers", "label": "InfoTheory", "desc": "Cover & Thomas: Elements of Information Theory"},
+            {"time": "19:30", "icon": "edit-3", "label": "Math Lab", "desc": "Graduate Math Problem-Set & Proof Lab"}
         ]
     else: # Sunday
         slots = [
             {"time": "09:00", "icon": "divide", "label": "Math 2", "desc": c1 or "Pure Math Block 2: Problem Sets & Proofs"},
             {"time": "13:00", "icon": "tool", "label": "Runtime", "desc": "Maintenance for limbed / ggmbed"},
-            {"time": "15:00", "icon": "globe", "label": "Penrose", "desc": lit_text or "The Road to Reality"}
+            {"time": "15:00", "icon": "globe", "label": "Penrose", "desc": lit_text or "The Road to Reality"},
+            {"time": "18:00", "icon": "database", "label": "Dist/IR", "desc": "Distributed Systems & IR (DDIA / Manning IIR)"},
+            {"time": "19:30", "icon": "cpu", "label": "Sys Lab", "desc": "Graduate Systems & GPU Architecture Lab"}
         ]
 
     if not tasks:
